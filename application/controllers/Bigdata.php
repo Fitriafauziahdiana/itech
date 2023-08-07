@@ -68,7 +68,7 @@ class Bigdata extends CI_Controller {
 			$berkas2		= $_FILES['berkas2']['name'];
 
 			$config['upload_path'] 		= './media/bigdata/';
-			$config['allowed_types'] 	= 'jpeg|jpg|png|pdf|doc|';
+			$config['allowed_types'] 	= 'jpeg|jpg|png|pdf|doc|docx';
 			$config['max_size']  		= 2000;
 			$config['max_width']  		= 1024;
 			$config['max_height']  		= 768;
@@ -76,7 +76,7 @@ class Bigdata extends CI_Controller {
 			
 			$this->load->library('upload', $config);
 			
-			if ( ! $this->upload->do_upload('berkas', 'berkas2')){
+			if ( ! $this->upload->do_upload('berkas')){
 				 echo "<script> alert('Maaf, File Gagal Di Upload.') </script>"; die(redirect('bigdata','refresh'));
 			}
 			else{
@@ -92,7 +92,7 @@ class Bigdata extends CI_Controller {
 				'jumlahpeserta'		=> $jumlahpeserta,
 				'linksertifikat' 		=> $linksertifikat,
 				'berkas' 		=> $berkas,
-				'berkas2' 		=> $berkas2,
+				'berkas2' 		=> $berkas2
 			);
 
 			$this->Mod_bigdata->add_bigdata($data);
@@ -122,7 +122,7 @@ class Bigdata extends CI_Controller {
 				'jumlahpeserta'		=> $jumlahpeserta,
 				'linksertifikat' 		=> $linksertifikat,
 				'berkas' 		=> $berkas,
-				'berkas2' 		=> $berkas2,
+				'berkas2' 		=> $berkas2
 			);
 
 			$this->db->where('id', $id);

@@ -9,19 +9,19 @@ class Dashboard extends CI_Controller {
             redirect(base_url('Login'));
         }
 
-        $this->load->model(['Mod_helper','Mod_surat', 'Mod_services','Mod_publikasi', 'Mod_multimedia','Mod_sekolah']);
+        $this->load->model(['Mod_helper','Mod_aplikasi', 'Mod_services','Mod_publikasi', 'Mod_multimedia','Mod_perusahaan']);
 	}
 
 	public function index()
 	{
 		$data = array(
 			'title' => "Integraltechnology",
-			'aplikasi' => $this->Mod_surat->count_aplikasi(),
-			'bigdata' => $this->Mod_surat->count_bigdata(),
+			'aplikasi' => $this->Mod_aplikasi->count_aplikasi(),
+			'bigdata' => $this->Mod_aplikasi->count_aplikasi(),
 			'services' => $this->Mod_services->count_services(),
 			'publikasi' => $this->Mod_publikasi->count_publikasi(),
 			'multimedia' => $this->Mod_multimedia->count_multimedia(),
-			'sekolah' => $this->Mod_sekolah->get_sekolah(),
+			'perusahaan' => $this->Mod_perusahaan->get_perusahaan(),
 		);
 
 		$this->load->view('tmp_site/index', $data);

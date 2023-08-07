@@ -110,4 +110,5 @@ class Aplikasi extends CI_Controller {
 		redirect('Aplikasi');
 	}
 
+	
 }

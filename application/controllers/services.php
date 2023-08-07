@@ -13,7 +13,7 @@ class Services extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-			'title' => "E-Arsip",
+			'title' => "Integraltechnology",
 			'services' => $this->Mod_services->read(),
 		);
 
@@ -28,7 +28,7 @@ class Services extends CI_Controller {
 	{
 		$id = $this->uri->segment(3);
 		$data = array(
-			'title' => "E-Arsip",
+			'title' => "Integraltechnology",
 			'detail' => $this->Mod_services->detail($id)->row_array(),
 		);
 
@@ -43,7 +43,7 @@ class Services extends CI_Controller {
 	{
 		$id = $this->uri->segment(3);
 		$data = array(
-			'title' => "E-Arsip",
+			'title' => "Integraltechnology",
 			'detail' => $this->Mod_services->detail($id)->row_array(),
 		);
 
@@ -61,13 +61,13 @@ class Services extends CI_Controller {
 			$nama_kegiatan  	= $this->input->post('nama_kegiatan');
 			$tgl_kegiatan 		= $this->input->post('tgl_kegiatan');
 			$berkas 		= $_FILES['berkas']['name'];
-			$berkas2 		= $_FILES['berkas2']['name'];
+			$bk 		= $_FILES['bk']['name'];
 
 			$config['upload_path'] 		= './media/services/';
-			$config['allowed_types'] 	= 'gif|jpg|png|pdf|doc|docx|xls|xlsx|rar|zip|tar';
-			$config['max_size']  		= 2000;
-			$config['max_width']  		= 1024;
-			$config['max_height']  		= 768;
+			$config['allowed_types'] 	= 'doc|docx';
+			$config['max_size']  		= 20000;
+			$config['max_width']  		= 10240;
+			$config['max_height']  		= 7680;
 			
 			$this->load->library('upload', $config);
 			
@@ -80,7 +80,7 @@ class Services extends CI_Controller {
 			}
 
 
-			if ( ! $this->upload->do_upload('berkas2')){
+			if ( ! $this->upload->do_upload('bk')){
 				 echo "<script> alert('Maaf, File Gagal Di Upload.') </script>"; die(redirect('services','refresh'));
 			}
 			else{
@@ -93,7 +93,7 @@ class Services extends CI_Controller {
 				'nama_kegiatan' 	=> $nama_kegiatan,
 				'tgl_kegiatan' 	=> $tgl_kegiatan,
 				'berkas'		=> $berkas,
-				'bk'			=> $berkas2
+				'bk'			=> $bk
 			);
 
 			$this->Mod_services->add($data);
@@ -109,7 +109,7 @@ class Services extends CI_Controller {
 			$nama_kegiatan  	= $this->input->post('nama_kegiatan');
 			$tgl_kegiatan 		= $this->input->post('tgl_kegiatan');
 			$berkas 		= $this->input->post('berkas');
-			$berkas2 		= $this->input->post('berkas2');
+			$bk		= $this->input->post('bk');
 
 			$data = array(
 				'id'			=> $id,
@@ -117,7 +117,7 @@ class Services extends CI_Controller {
 				'nama_kegiatan' 	=> $nama_kegiatan,
 				'tgl_kegiatan' 	=> $tgl_kegiatan,
 				'berkas'		=> $berkas,
-				'bk'			=> $berkas2
+				'bk'			=> $bk
 			);
 			$this->db->where('id', $id);
 			$this->Mod_services->update($data);

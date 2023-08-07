@@ -45,7 +45,7 @@
 
 											<p></p>
 
-											<a href="<?php echo base_url('./media/bigdata2/'. $row->berkas2) ?>" title="Download" 
+											<a href="<?php echo base_url('./media/bigdata/'. $row->berkas2) ?>" title="Download" 
 											class="btn btn-sm btn-primary"><i class="fas fa-cloud-download-alt "></i> Data</a> 
 											
 											<td width="15%" align="center">

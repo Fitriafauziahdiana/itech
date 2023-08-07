@@ -26,4 +26,11 @@ class Mod_bigdata extends CI_Model {
 	public function delete_bigdata($id){
 		return $this->db->delete('bigdata', array('id' => $id));
 	}
+
+	public function count_bigdata()
+	{
+		$query = $this->db->query("SELECT * FROM bigdata");
+        $bigdata = $query->num_rows();
+        return $bigdata;
+	}
 }

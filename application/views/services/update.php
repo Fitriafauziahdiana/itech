@@ -10,7 +10,6 @@
 					<div class="box box-solid">
 						<div class="box-body">
 							<input type="hidden" name="id" value="<?php echo $detail['id'] ?>">
-							
 							<div class="form-group">
 				        		<label for="tgl_kegiatan" class="control-label col-md-3">Tanggal:</label>
 				        		<div class="col-md-9">
@@ -37,9 +36,9 @@
 				        		</div>
 				        	</div>
 				            <div class="form-group">
-				                <label for="berkas2" class="control-label col-md-3">Upload Data Peserta :</label>
+				                <label for="bk" class="control-label col-md-3">Upload Data Peserta :</label>
 				                <div class="col-md-9">
-				                   <input type="text" class="form-control" name="berkas2" id="berkas2" value="<?php echo $detail['bk'] ?>" autocomplete="off" required>
+				                   <input type="text" class="form-control" name="bk" id="bk" value="<?php echo $detail['bk'] ?>" autocomplete="off" required>
 				                </div>
 				            </div>
 				        	<div class="form-group">
@@ -58,3 +57,8 @@
 	</section>
 	<!-- Akhir isi Kontent -->
 </div>
+
+
+
+
+

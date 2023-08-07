@@ -20,7 +20,7 @@
 									<th>Tanggal</th>
 									<th>Nama Kegiatan</th>
                                     <th>Jumlah Peserta</th>
-                                    <th>Download</th>
+                                    <th>Unduh</th>
 									<th><i class="fas fa-cogs"></i></th>
 								</tr>
 							</thead>
@@ -33,6 +33,7 @@
                                         <td><?php echo $row->jumlah_peserta?></td>
                                         <td align="center">
                                             <a href="<?php echo base_url('./media/services/'. $row->berkas) ?>" title="Download" class="btn btn-sm btn-warning"><i class="fas fa-cloud-download-alt "></i> Jadwal Kegiatan</a>
+
                                             <a href="<?php echo base_url('./media/services/'. $row->bk) ?>" title="Download" class="btn btn-sm btn-primary"><i class="fas fa-cloud-download-alt "></i> Data Peserta</a>
                                         </td>
 										<td width="15%" align="center">
@@ -102,9 +103,9 @@
         		</div>
         	</div>
             <div class="form-group">
-                <label for="berkas" class="control-label col-md-3">Upload Data Peserta :</label>
+                <label for="bk" class="control-label col-md-3">Upload Data Peserta :</label>
                 <div class="col-md-9">
-                    <input type="file" class="form-control" name="berkas2" id="berkas" required>
+                    <input type="file" class="form-control" name="bk" id="bk" required>
                 </div>
             </div>
       </div>
