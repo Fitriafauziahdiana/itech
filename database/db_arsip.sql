@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_arsip`
+-- Database: `db_itech`
 --
 
 -- --------------------------------------------------------
@@ -33,119 +33,57 @@ CREATE TABLE `services` (
   `jumlah_peserta` varchar(30) NOT NULL,
   `nama_kegiatan` varchar(30) NOT NULL,
   `tgl_kegiatan` varchar(20) NOT NULL,
-  `no_un` varchar(30) NOT NULL,
-  `no_services` varchar(30) NOT NULL,
-  `tahun_lulus` varchar(10) NOT NULL,
   `berkas` varchar(100) NOT NULL,
-  `skhun` varchar(100) NOT NULL
+  `bk` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`id`, `jumlah_peserta`, `nama_kegiatan`, `tgl_kegiatan`, `no_un`, `no_services`, `tahun_lulus`, `berkas`, `skhun`) VALUES
-(1, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(2, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(3, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(4, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(5, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(6, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(7, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(8, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(9, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(10, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(11, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(12, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(13, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(14, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(15, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(16, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(17, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(18, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(19, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(20, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(21, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(22, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(23, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(24, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(25, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(26, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(27, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(28, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(29, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(30, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(31, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(32, 'Puguh Sulistyo Pambudi', 'Batang Astrak', '22-07-2018', '015-001-2010', 'DN-3421600', '2013', 'File_demo.docx', 'File_demo.pdf'),
-(33, 'ADHITA PUTRI AYUNANTHA', 'SITUBONDO', '07-02-2000', '2-144-565-4646-4545', 'SMK-154-1545', '2022', 'File_demo.pdf', 'File_demo.pdf');
+INSERT INTO `services` (`id`, `jumlah_peserta`, `nama_kegiatan`, `tgl_kegiatan`,`berkas`, `bk`) VALUES
+(1, '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nilai`
+-- Table structure for table `multimedia`
 --
 
-CREATE TABLE `nilai` (
+CREATE TABLE `multimedia` (
   `id` int(11) NOT NULL,
-  `jurusan` varchar(100) NOT NULL,
-  `kelas` varchar(20) NOT NULL,
-  `kode` varchar(5) NOT NULL,
-  `semester` varchar(15) NOT NULL,
-  `tahun_ajaran` varchar(20) NOT NULL,
-  `guru` varchar(40) NOT NULL,
-  `berkas` varchar(100) NOT NULL
+  `tanggal` varchar(255) NOT NULL,
+  `namakegiatan` varchar(20) NOT NULL,
+  `linkvideo` varchar(40) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `nilai`
+-- Dumping data for table `multimedia`
 --
 
-INSERT INTO `nilai` (`id`, `jurusan`, `kelas`, `kode`, `semester`, `tahun_ajaran`, `guru`, `berkas`) VALUES
-(2, 'TKJ', 'Kelas 1', 'A', '2 (Dua)', '2018/2019', 'Puguh Sulistyo Pambudi', 'File_demo.pdf'),
-(3, 'TKJ', 'Kelas 1', 'A', '2 (Dua)', '2018/2019', 'Puguh Sulistyo Pambudi', 'File_demo.pdf'),
-(4, 'TKJ', 'Kelas 1', 'A', '2 (Dua)', '2018/2019', 'Puguh Sulistyo Pambudi', 'File_demo.pdf'),
-(5, 'TKJ', 'Kelas 1', 'A', '2 (Dua)', '2018/2019', 'Puguh Sulistyo Pambudi', 'File_demo.pdf'),
-(6, 'TKJ', 'Kelas 1', 'A', '2 (Dua)', '2018/2019', 'Puguh Sulistyo Pambudi', 'File_demo.pdf'),
-(7, 'TKJ', 'Kelas 1', 'A', '2 (Dua)', '2018/2019', 'Puguh Sulistyo Pambudi', 'File_demo.pdf'),
-(8, 'TKJ', 'Kelas 2', 'A', '2 (Dua)', '2018/2019', 'Puguh Sulistyo Pambudi', 'File_demo.pdf'),
-(9, 'TKJ', 'Kelas 1', 'B', '2 (Dua)', '2018/2019', 'Puguh Sulistyo Pambudi', 'File_demo.pdf'),
-(12, 'ATPH', 'Kelas 10', '-', '1 (Satu)', '2022-2023', 'SULE', 'File_demo.docx');
+INSERT INTO `multimedia` (`id`, `tanggal`, `namakegiatan`, `linkvideo`) VALUES
+(2, '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `soal`
+-- Table structure for table `publikasi`
 --
 
-CREATE TABLE `soal` (
+CREATE TABLE `publikasi` (
   `id` int(11) NOT NULL,
-  `mapel` varchar(100) NOT NULL,
-  `kode_mapel` varchar(20) NOT NULL,
-  `kelas` varchar(20) NOT NULL,
-  `kode` varchar(5) NOT NULL,
-  `jurusan` varchar(100) NOT NULL,
-  `semester` varchar(20) NOT NULL,
-  `guru` varchar(30) NOT NULL,
-  `tahun_ajaran` varchar(20) NOT NULL,
-  `kurikulum` varchar(20) NOT NULL,
-  `jenis` varchar(20) NOT NULL,
-  `berkas` varchar(100) NOT NULL
+  `tanggal` varchar(255) NOT NULL,
+  `judul_flyer` varchar(255) NOT NULL,
+  `linkinter` varchar(255) NOT NULL,
+  `linkekster` varchar(255) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `soal`
+-- Dumping data for table `publikasi`
 --
 
-INSERT INTO `soal` (`id`, `mapel`, `kode_mapel`, `kelas`, `kode`, `jurusan`, `semester`, `guru`, `tahun_ajaran`, `kurikulum`, `jenis`, `berkas`) VALUES
-(1, 'Matematika', 'MTK', 'Kelas 2', 'A', 'RPL', '2 (Dua)', 'Puguh Sulistyo Pambudi', '2018/2019', 'K13', 'UTS', 'File_demo.docx'),
-(2, 'Matematika', 'MTK', 'Kelas 2', 'A', 'RPL', '2 (Dua)', 'Puguh Sulistyo Pambudi', '2018/2019', 'K13', 'UTS', 'File_demo.docx'),
-(3, 'Matematika', 'MTK', 'Kelas 2', 'A', 'RPL', '2 (Dua)', 'Puguh Sulistyo Pambudi', '2018/2019', 'K13', 'UTS', 'File_demo.docx'),
-(4, 'Matematika', 'MTK', 'Kelas 2', 'A', 'RPL', '2 (Dua)', 'Puguh Sulistyo Pambudi', '2018/2019', 'K13', 'UTS', 'File_demo.docx'),
-(5, 'Matematika', 'MTK', 'Kelas 2', 'A', 'RPL', '2 (Dua)', 'Puguh Sulistyo Pambudi', '2018/2019', 'K13', 'UTS', 'File_demo.docx'),
-(6, 'Bahasa Inggris', 'B.ING', 'Kelas 2', 'A', 'RPL', '2 (Dua)', 'Puguh Sulistyo Pambudi', '2018/2019', 'K13', 'UTS', 'File_demo.docx'),
-(7, 'Bahasa Indonesia', 'B.IND', 'Kelas 2', 'A', 'RPL', '2 (Dua)', 'Puguh Sulistyo Pambudi', '2018/2019', 'K13', 'UTS', 'File_demo.docx'),
-(8, 'Matematika', 'MTK', 'Kelas 2', 'A', 'RPL', '2 (Dua)', 'Puguh Sulistyo Pambudi', '2018/2019', 'K13', 'UTS', 'File_demo.docx'),
-(9, 'Matematika', 'MTK', 'Kelas 10', '-', 'ATPH', '1 (Satu)', 'AZIZ', '2022-2023', '2013 Rev', 'Try Out', 'File_demo.docx');
+INSERT INTO `publikasi` (`id`, 'tanggal', 'judul_flyer', 'linkinter', 'linkekster') VALUES
+(1, '');
 
 -- --------------------------------------------------------
 
@@ -168,7 +106,7 @@ CREATE TABLE `bigdata` (
 -- Dumping data for table `bigdata`
 --
 
-INSERT INTO `bigdata` (`id`, `tanggal`, `namakegiatan`, `bidangpenyelenggara`, `jumlahpeserta`, `linksertifikat`,  `berkas1`, `berkas`) VALUES
+INSERT INTO `bigdata` (`id`, `tanggal`, `namakegiatan`, `bidangpenyelenggara`, `jumlahpeserta`, `linksertifikat`,  `berkas1`, `berkas2`) VALUES
 (1, '');
 
 -- --------------------------------------------------------
@@ -190,64 +128,21 @@ CREATE TABLE `aplikasi` (
 --
 
 INSERT INTO `aplikasi` (`id`, `tanggal`, `nama_aplikasi`, `deskripsi`, `	link_aplikasi`) VALUES
-(2, '22-07-2018', '421.5/A/201/2018', 'DDS', 'Undangan', 'Diterima TU', 'Surat Sudah Diterima TU', 'File_demo.pdf');
+(1, '');
 
+-- --------------------------------------------------------
+-- --------------------------------------------------------
 -- --------------------------------------------------------
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_jurusan`
+-- Table structure for table `tb_perusahaan`
 --
 
-CREATE TABLE `tb_jurusan` (
-  `id` int(5) NOT NULL,
-  `kode` varchar(20) NOT NULL,
-  `jurusan` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_jurusan`
---
-
-INSERT INTO `tb_jurusan` (`id`, `kode`, `jurusan`) VALUES
-(2, 'RPL', 'Rekayasa Perangkat Lunak'),
-(3, 'BDP', 'Budidaya Perikanan'),
-(4, 'TKJ', 'Teknik Komputer Jaringan'),
-(5, 'ATPH', 'Agribisnis Tanaman Pangan dan Hortikultura');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_pelajaran`
---
-
-CREATE TABLE `tb_pelajaran` (
-  `id` int(11) NOT NULL,
-  `kode` varchar(20) NOT NULL,
-  `mapel` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_pelajaran`
---
-
-INSERT INTO `tb_pelajaran` (`id`, `kode`, `mapel`) VALUES
-(2, 'MTK', 'Matematika'),
-(3, 'B.ING', 'Bahasa Inggris'),
-(4, 'SBD', 'Seni Budaya'),
-(5, 'PABD', 'Pendidikan Agama dan Budi Pekerti');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_sekolah`
---
-
-CREATE TABLE `tb_sekolah` (
+CREATE TABLE `tb_perusahaan` (
   `id` int(2) NOT NULL,
-  `kepala_sekolah` varchar(40) NOT NULL,
-  `nip` varchar(30) NOT NULL,
-  `nama_sekolah` varchar(40) NOT NULL,
+  `kepala_perusahaan` varchar(40) NOT NULL,
+  `nama_perusahaan` varchar(40) NOT NULL,
   `no_telp` varchar(20) NOT NULL,
   `email` varchar(100) NOT NULL,
   `alamat` text NOT NULL,
@@ -255,11 +150,11 @@ CREATE TABLE `tb_sekolah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_sekolah`
+-- Dumping data for table `tb_perusahaan`
 --
 
-INSERT INTO `tb_sekolah` (`id`, `kepala_sekolah`, `nip`, `nama_sekolah`, `no_telp`, `email`, `alamat`, `website`) VALUES
-(1, 'HARYANTO,S.Pd', '-', 'SMK NU 03 BONDOWOSO', '082XXXXXXXXX', 'smkn12acehsingkil@gmail.com', 'Jl. Niaga Rt.09/02 Desa Nogosari Kec.Sukosari Kab.Bondowoso', 'https://smknu3bws.sch.id');
+INSERT INTO `tb_perusahaan` (`id`, `kepala_perusahaan`, `nama_perusahaan`, `no_telp`, `email`, `alamat`, `website`) VALUES
+(1, '');
 
 -- --------------------------------------------------------
 
@@ -293,15 +188,15 @@ ALTER TABLE `services`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `nilai`
+-- Indexes for table `multimedia`
 --
-ALTER TABLE `nilai`
+ALTER TABLE `multimedia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `soal`
+-- Indexes for table `publikasi`
 --
-ALTER TABLE `soal`
+ALTER TABLE `publikasi`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -322,22 +217,11 @@ ALTER TABLE `aplikasi`
 ALTER TABLE `tb_jeniskegiatan`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `tb_jurusan`
---
-ALTER TABLE `tb_jurusan`
-  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_pelajaran`
+-- Indexes for table `tb_perusahaan`
 --
-ALTER TABLE `tb_pelajaran`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `tb_sekolah`
---
-ALTER TABLE `tb_sekolah`
+ALTER TABLE `tb_perusahaan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -357,15 +241,15 @@ ALTER TABLE `services`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT for table `nilai`
+-- AUTO_INCREMENT for table `multimedia`
 --
-ALTER TABLE `nilai`
+ALTER TABLE `multimedia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `soal`
+-- AUTO_INCREMENT for table `publikasi`
 --
-ALTER TABLE `soal`
+ALTER TABLE `publikasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
@@ -386,22 +270,12 @@ ALTER TABLE `aplikasi`
 ALTER TABLE `tb_jeniskegiatan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
---
--- AUTO_INCREMENT for table `tb_jurusan`
---
-ALTER TABLE `tb_jurusan`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+-
 
 --
--- AUTO_INCREMENT for table `tb_pelajaran`
+-- AUTO_INCREMENT for table `tb_perusahaan`
 --
-ALTER TABLE `tb_pelajaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `tb_sekolah`
---
-ALTER TABLE `tb_sekolah`
+ALTER TABLE `tb_perusahaan`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --

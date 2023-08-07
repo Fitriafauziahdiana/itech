@@ -4,7 +4,7 @@ class Aplikasi extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model(['Mod_surat','Mod_helper','Mod_master']);
+		$this->load->model(['Mod_aplikasi','Mod_helper','Mod_master']);
 
 		if($this->session->userdata('level') != "Admin"){
             redirect(base_url('Login'));
@@ -15,7 +15,7 @@ class Aplikasi extends CI_Controller {
 	{
 		$data = array(
 			'title' => "Integraltechnology",
-			'aplikasi' => $this->Mod_surat->read_aplikasi(),
+			'aplikasi' => $this->Mod_aplikasi->read_aplikasi(),
 		);
 
 		$this->load->view('tmp_site/index', $data);
@@ -30,7 +30,7 @@ class Aplikasi extends CI_Controller {
 		$id = $this->uri->segment(3);
 		$data = array(
 			'title' => "Integraltechnology",
-			'view' => $this->Mod_surat->view($id)->row_array(),
+			'view' => $this->Mod_aplikasi->view($id)->row_array(),
 		);
 
 		$this->load->view('tmp_site/index', $data);
@@ -45,7 +45,7 @@ class Aplikasi extends CI_Controller {
 		$id = $this->uri->segment(3);
 		$data = array(
 			'title' => "Integraltechnology",
-			'view' => $this->Mod_surat->view($id)->row_array(),
+			'view' => $this->Mod_aplikasi->view($id)->row_array(),
 		);
 
 		$this->load->view('tmp_site/index', $data);
@@ -76,7 +76,7 @@ class Aplikasi extends CI_Controller {
 				'link_aplikasi' => $link_aplikasi,
 			);
 
-			$this->Mod_surat->add_aplikasi($data);
+			$this->Mod_aplikasi->add_aplikasi($data);
 			redirect('Aplikasi');
 		}
 	}
@@ -98,7 +98,7 @@ class Aplikasi extends CI_Controller {
 				'link_aplikasi' 	=> $link_aplikasi
 			);
 			$this->db->where('id', $id);
-			$this->Mod_surat->update_aplikasi($data);
+			$this->Mod_aplikasi->update_aplikasi($data);
 			redirect('Aplikasi');
 		}
 	}
@@ -106,7 +106,7 @@ class Aplikasi extends CI_Controller {
 	public function delete()
 	{
 		$id = $this->uri->segment(3);
-		$this->Mod_surat->delete_aplikasi($id, 'aplikasi');
+		$this->Mod_aplikasi->delete_aplikasi($id, 'aplikasi');
 		redirect('Aplikasi');
 	}
 

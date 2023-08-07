@@ -16,8 +16,8 @@
 			<li><a href="<?php echo base_url('Services') ?>"><i class="fas fa-file-archive "></i> <span> E-Services</span></a></li>
 			<li><a href="<?php echo base_url('Aplikasi') ?>"><i class="fas fa-envelope "></i> <span> Aplikasi</span></a></li>
 			<li><a href="<?php echo base_url('Bigdata') ?>"><i class="fas fa-envelope-open"></i> <span>Big Data</span></a></li>
-			<li><a href="<?php echo base_url('Nilai') ?>"><i class="fas fa-clipboard-list "></i> <span>Arsip Nilai Siswa</span></a></li>
-			<li><a href="<?php echo base_url('Soal') ?>"><i class="fas fa-file-alt"></i> <span>Arsip Soal</span></a></li>
+			<li><a href="<?php echo base_url('Multimedia') ?>"><i class="fas fa-clipboard-list "></i> <span>Multimedia</span></a></li>
+			<li><a href="<?php echo base_url('Publikasi') ?>"><i class="fas fa-file-alt"></i> <span>Publikasi</span></a></li>
 			
 			<li class="treeview">
 				<a href=""><i class="fas fa-cogs"></i> <span>Master Apps</span>
@@ -27,10 +27,8 @@
 				</a>
 				<ul class="treeview-menu">
 					<li><a href="<?php echo base_url('Master/jeniskegiatan') ?>">Master Jenis Kegiatan</a></li>
-					<li><a href="<?php echo base_url('Master/pelajaran') ?>">Master Pelajaran</a></li>
-					<li><a href="<?php echo base_url('Master/jurusan') ?>">Master Kompetensi Keahlian</a></li>
 					<li><a href="<?php echo base_url('Master/users') ?>">Master Users</a></li>
-					<li><a href="<?php echo base_url('Sekolah/update/'.'1') ?>">Profil Sekolah</a></li>
+					<li><a href="<?php echo base_url('Perusahaan/update/'.'1') ?>">Profil Perusahaan</a></li>
 				</ul>
 			</li>
 

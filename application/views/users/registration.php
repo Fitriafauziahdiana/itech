@@ -52,7 +52,7 @@
 			</div>
 
 			<p class="text-center">
-				Copyright &copy; 2018 Ndesotech.com
+			Copyright &copy; 2023 <a href="https://bpsdm.jabarprov.go.id">Infobpsdmprovjabar</a>
 			</p>
 
 		</div>

@@ -25,12 +25,12 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
-
 		<!-- Preloader -->
 		<div class="preloader">
-			<div class="load">
-				<img src="<?php echo base_url() ?>media/img/load.png" width="80%">
-				<p>Tunggu Sebentar ...</p>
+			<div class="loading">
+				<img src="<?php echo base_url() ?>media/img/loadd.png" width="80">
+				<p></p>
+				<p>Loading ....</p>
 			</div>
 		</div>
 		<!-- Akhir preloader -->

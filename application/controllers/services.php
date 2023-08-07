@@ -13,7 +13,7 @@ class Services extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-			'title' => "Integraltechnology",
+			'title' => "E-Arsip",
 			'services' => $this->Mod_services->read(),
 		);
 
@@ -28,7 +28,7 @@ class Services extends CI_Controller {
 	{
 		$id = $this->uri->segment(3);
 		$data = array(
-			'title' => "Integraltechnology",
+			'title' => "E-Arsip",
 			'detail' => $this->Mod_services->detail($id)->row_array(),
 		);
 
@@ -43,7 +43,7 @@ class Services extends CI_Controller {
 	{
 		$id = $this->uri->segment(3);
 		$data = array(
-			'title' => "Integraltechnology",
+			'title' => "E-Arsip",
 			'detail' => $this->Mod_services->detail($id)->row_array(),
 		);
 
@@ -81,7 +81,7 @@ class Services extends CI_Controller {
 
 
 			if ( ! $this->upload->do_upload('berkas2')){
-				 echo "<script> alert('Maaf, File Gagal Di Upload.') </script>"; die(redirect('Services','refresh'));
+				 echo "<script> alert('Maaf, File Gagal Di Upload.') </script>"; die(redirect('services','refresh'));
 			}
 			else{
 				$data = array('upload_data' => $this->upload->data());
@@ -93,7 +93,7 @@ class Services extends CI_Controller {
 				'nama_kegiatan' 	=> $nama_kegiatan,
 				'tgl_kegiatan' 	=> $tgl_kegiatan,
 				'berkas'		=> $berkas,
-				'skhun'			=> $berkas2
+				'bk'			=> $berkas2
 			);
 
 			$this->Mod_services->add($data);
@@ -117,7 +117,7 @@ class Services extends CI_Controller {
 				'nama_kegiatan' 	=> $nama_kegiatan,
 				'tgl_kegiatan' 	=> $tgl_kegiatan,
 				'berkas'		=> $berkas,
-				'skhun'			=> $berkas2
+				'bk'			=> $berkas2
 			);
 			$this->db->where('id', $id);
 			$this->Mod_services->update($data);

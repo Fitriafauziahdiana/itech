@@ -20,7 +20,7 @@
 									<th>Tanggal</th>
 									<th>Nama Kegiatan</th>
                                     <th>Jumlah Peserta</th>
-                                    <th>Unduh</th>
+                                    <th>Download</th>
 									<th><i class="fas fa-cogs"></i></th>
 								</tr>
 							</thead>
@@ -33,8 +33,7 @@
                                         <td><?php echo $row->jumlah_peserta?></td>
                                         <td align="center">
                                             <a href="<?php echo base_url('./media/services/'. $row->berkas) ?>" title="Download" class="btn btn-sm btn-warning"><i class="fas fa-cloud-download-alt "></i> Jadwal Kegiatan</a>
-
-                                            <a href="<?php echo base_url('./media/services/'. $row->skhun) ?>" title="Download" class="btn btn-sm btn-primary"><i class="fas fa-cloud-download-alt "></i> Data Peserta</a>
+                                            <a href="<?php echo base_url('./media/services/'. $row->bk) ?>" title="Download" class="btn btn-sm btn-primary"><i class="fas fa-cloud-download-alt "></i> Data Peserta</a>
                                         </td>
 										<td width="15%" align="center">
 											<a href="<?php echo base_url('services/detail/'. $row->id) ?>" title="Update">
@@ -120,21 +119,3 @@
 
 
 
-
-
-
-
-
-<!-- /**
- * Aplikasi e-Arsip Untuk Sekolah versi GRATIS 
- * untuk sekolah SD/Sederajat, SMP/Sederajat, SMA/Sederajat
- * @version    1.0
- * @author     Puguh Sulistyo Pambudi | https://facebook.com/puguhsulistyo.pambudi | puguh.polijen@gmail.com | 0822 7440 4756
- * @copyright  (c) 2018
- * @link       https://codepackid.com
- * @since      Version 1.0
- *
- * PERINGATAN :
- * 1. TIDAK DIPERKENANKAN MEMPERJUALBELIKAN APLIKASI INI TANPA SEIZIN DARI PIHAK PENGEMBANG APLIKASI.
- * 2. TIDAK DIPERKENANKAN MENGHAPUS KODE SUMBER APLIKASI.
- */ -->

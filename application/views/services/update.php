@@ -10,6 +10,7 @@
 					<div class="box box-solid">
 						<div class="box-body">
 							<input type="hidden" name="id" value="<?php echo $detail['id'] ?>">
+							
 							<div class="form-group">
 				        		<label for="tgl_kegiatan" class="control-label col-md-3">Tanggal:</label>
 				        		<div class="col-md-9">
@@ -38,7 +39,7 @@
 				            <div class="form-group">
 				                <label for="berkas2" class="control-label col-md-3">Upload Data Peserta :</label>
 				                <div class="col-md-9">
-				                   <input type="text" class="form-control" name="berkas2" id="berkas2" value="<?php echo $detail['skhun'] ?>" autocomplete="off" required>
+				                   <input type="text" class="form-control" name="berkas2" id="berkas2" value="<?php echo $detail['bk'] ?>" autocomplete="off" required>
 				                </div>
 				            </div>
 				        	<div class="form-group">
@@ -57,27 +58,3 @@
 	</section>
 	<!-- Akhir isi Kontent -->
 </div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- /**
- * Aplikasi e-Arsip Untuk Sekolah versi GRATIS 
- * untuk sekolah SD/Sederajat, SMP/Sederajat, SMA/Sederajat
- * @version    1.0
- * @author     Puguh Sulistyo Pambudi | https://facebook.com/puguhsulistyo.pambudi | puguh.polijen@gmail.com | 0822 7440 4756
- * @copyright  (c) 2018
- * @link       https://codepackid.com
- * @since      Version 1.0
- *
- * PERINGATAN :
- * 1. TIDAK DIPERKENANKAN MEMPERJUALBELIKAN APLIKASI INI TANPA SEIZIN DARI PIHAK PENGEMBANG APLIKASI.
- * 2. TIDAK DIPERKENANKAN MENGHAPUS KODE SUMBER APLIKASI.
- */ -->

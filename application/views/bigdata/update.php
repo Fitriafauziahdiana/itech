@@ -49,9 +49,9 @@
                                 </div>
                             </div>
                              <div class="form-group">
-                                <label for="berkas1" class="control-label col-md-3 text-right"> Upload Foto Kegiatan :</label>
+                                <label for="berkas" class="control-label col-md-3 text-right"> Upload Foto Kegiatan :</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" name="berkas1" id="berkas1" value="<?php echo $views['berkas1'] ?>" autocomplete="off" readonly>
+                                    <input type="text" class="form-control" name="berkas" id="berkas" value="<?php echo $views['berkas'] ?>" autocomplete="off" readonly>
                                 </div>
                             </div>
                             <div class="form-group">

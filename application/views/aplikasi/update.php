@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				
-				<form action="<?php echo base_url('Inbox/update_inbox') ?>" method="post" class="form-horizontal">
+				<form action="<?php echo base_url('Aplikasi/update_aplikasi') ?>" method="post" class="form-horizontal">
 					<div class="box box-solid">
 						<div class="box-body">
 							<input type="hidden" name="id" value="<?php echo $view['id'] ?>">

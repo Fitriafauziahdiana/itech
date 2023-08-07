@@ -25,13 +25,13 @@
 				<!-- akun user -->
 				<li class="dropdown user user-menu">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<img src="<?php echo base_url() ?>media/img/user2-160x160.jpg" class="user-image" alt="Photo User">
+						<img src="<?php echo base_url() ?>media/img/user.png" class="user-image" alt="Photo User">
 						<span class="hidden-xs"><?php echo $this->session->userdata('full_name'); ?></span>
 					</a>
 				
 					<ul class="dropdown-menu">
 						<li class="user-header">
-							<img src="<?php echo base_url() ?>media/img/user2-160x160.jpg" class="img-circle" alt="Photo User">
+							<img src="<?php echo base_url() ?>media/img/user.png" class="img-circle" alt="Photo User">
 							<p>
 								<?php echo $this->session->userdata('full_name'); ?>
 								<small>Login Sebagai : <?php echo $this->session->userdata('level'); ?></small>

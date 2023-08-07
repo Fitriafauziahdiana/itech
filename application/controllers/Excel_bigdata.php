@@ -1,9 +1,9 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-class Excel_aplikasi extends CI_Controller {
+class Excel_bigdata extends CI_Controller {
 
 	function __construct(){
 		parent:: __construct();
-		$this->load->model(['Mod_aplikasi','Mod_helper']);
+		$this->load->model(['Mod_bigdata','Mod_helper']);
 
 		if($this->session->userdata('level') != "Admin"){
             redirect(base_url('Login'));
@@ -19,10 +19,10 @@ class Excel_aplikasi extends CI_Controller {
 		// Settingan awal fil excel
     	$excel->getProperties()->setCreator('FF')
                  ->setLastModifiedBy('FF')
-                 ->setTitle("Laporan Data Aplikasi")
-                 ->setSubject("Data Data Aplikasi")
-                 ->setDescription("Laporan Data Aplikasi")
-                 ->setKeywords("Data Data Aplikasi");
+                 ->setTitle("Laporan Big Data")
+                 ->setSubject("Big Data")
+                 ->setDescription("Laporan Big Data")
+                 ->setKeywords("Big Data");
 
         // Buat sebuah variabel untuk menampung pengaturan style dari header tabel
 	    $style_col = array(
@@ -56,22 +56,22 @@ class Excel_aplikasi extends CI_Controller {
 
 
 	    $excel->setActiveSheetIndex(0)->setCellValue('A1', "LAPORAN" );
-	    $excel->getActiveSheet()->mergeCells('A1:E1'); // Set Merge Cell pada kolom A1 sampai E1
+	    $excel->getActiveSheet()->mergeCells('A1:H1'); // Set Merge Cell pada kolom A1 sampai E1
 	    $excel->getActiveSheet()->getStyle('A1')->getFont()->setBold(TRUE); // Set bold kolom A1
 	    $excel->getActiveSheet()->getStyle('A1')->getFont()->setSize(15); // Set font size 15 untuk kolom A1
 	    $excel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER); 
 
-	    $excel->setActiveSheetIndex(0)->setCellValue('A2', "DATA APLIKASI");
-	    $excel->getActiveSheet()->mergeCells('A2:E2'); // Set Merge Cell pada kolom A1 sampai E1
+	    $excel->setActiveSheetIndex(0)->setCellValue('A2', "DATA SURAT KELUAR");
+	    $excel->getActiveSheet()->mergeCells('A2:H2'); // Set Merge Cell pada kolom A1 sampai E1
 	    $excel->getActiveSheet()->getStyle('A2')->getFont()->setBold(TRUE); // Set bold kolom A1
 	    $excel->getActiveSheet()->getStyle('A2')->getFont()->setSize(15); // Set font size 15 untuk kolom A1
 	    $excel->getActiveSheet()->getStyle('A2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 
-	     $sekolah = $this->Mod_helper->sekolah();
+	    $sekolah = $this->Mod_helper->sekolah();
 	    foreach($sekolah as $key=>$row){
 
 	    $excel->setActiveSheetIndex(0)->setCellValue('A3', $row->nama_sekolah);
-	    $excel->getActiveSheet()->mergeCells('A3:E3'); // Set Merge Cell pada kolom A1 sampai E1
+	    $excel->getActiveSheet()->mergeCells('A3:H3'); // Set Merge Cell pada kolom A1 sampai E1
 	    $excel->getActiveSheet()->getStyle('A3')->getFont()->setBold(TRUE); // Set bold kolom A1
 	    $excel->getActiveSheet()->getStyle('A3')->getFont()->setSize(14); // Set font size 15 untuk kolom A1
 	    $excel->getActiveSheet()->getStyle('A3')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER); 
@@ -81,9 +81,12 @@ class Excel_aplikasi extends CI_Controller {
 	    // Buat header tabel nya pada baris ke 3
 	    $excel->setActiveSheetIndex(0)->setCellValue('A6', "NO"); 
 	    $excel->setActiveSheetIndex(0)->setCellValue('B6', "TANGGAL"); 
-	    $excel->setActiveSheetIndex(0)->setCellValue('C6', "NAMA");
-	    $excel->setActiveSheetIndex(0)->setCellValue('D6', "DESKRIPSI");
-	    $excel->setActiveSheetIndex(0)->setCellValue('E6', "LINK APLIKASI");
+	    $excel->setActiveSheetIndex(0)->setCellValue('C6', "NAMA KEGIATAN");
+	    $excel->setActiveSheetIndex(0)->setCellValue('D6', "BIDANG PENYELENGGARA");
+	    $excel->setActiveSheetIndex(0)->setCellValue('E6', "JUMLAH PESERTA");
+	    $excel->setActiveSheetIndex(0)->setCellValue('F6', "ALAMAT");
+	    $excel->setActiveSheetIndex(0)->setCellValue('G6', "LINK SERTIFIKAT");
+
 	    
 
 	    // Apply style header yang telah kita buat tadi ke masing-masing kolom header
@@ -92,10 +95,14 @@ class Excel_aplikasi extends CI_Controller {
 	    $excel->getActiveSheet()->getStyle('C6')->applyFromArray($style_col);
 	    $excel->getActiveSheet()->getStyle('D6')->applyFromArray($style_col);
 	    $excel->getActiveSheet()->getStyle('E6')->applyFromArray($style_col);
+	    $excel->getActiveSheet()->getStyle('F6')->applyFromArray($style_col);
+	    $excel->getActiveSheet()->getStyle('G6')->applyFromArray($style_col);
+
+
 	   
 
-	    // Panggil function view yang ada di SiswaModel untuk menampilkan semua data
-	    $aplikasi = $this->Mod_aplikasi->read_aplikasi();
+	    // Panggil function view yang ada di SiswaModel untuk menampilkan semua data 
+	    $aplikasi = $this->Mod_bigdata->read_bigdata();
 	    $no = 1; 
 	    $numrow = 7; 
 	    foreach($aplikasi as $row){ 
@@ -103,7 +110,10 @@ class Excel_aplikasi extends CI_Controller {
 	      $excel->setActiveSheetIndex(0)->setCellValue('B'.$numrow, $row->tanggal);
 	      $excel->setActiveSheetIndex(0)->setCellValue('C'.$numrow, $row->nomor);
 	      $excel->setActiveSheetIndex(0)->setCellValue('D'.$numrow, $row->pengirim);
-	      $excel->setActiveSheetIndex(0)->setCellValue('E'.$numrow, $row->disposisi);
+	      $excel->setActiveSheetIndex(0)->setCellValue('E'.$numrow, $row->jumlahpeserta);
+	      $excel->setActiveSheetIndex(0)->setCellValue('F'.$numrow, $row->alamat);
+	      $excel->setActiveSheetIndex(0)->setCellValue('G'.$numrow, $row->perihal);
+
 	     
 
 	   	// Apply style row yang telah kita buat tadi ke masing-masing baris (isi tabel)
@@ -112,6 +122,9 @@ class Excel_aplikasi extends CI_Controller {
 	      $excel->getActiveSheet()->getStyle('C'.$numrow)->applyFromArray($style_row);
 	      $excel->getActiveSheet()->getStyle('D'.$numrow)->applyFromArray($style_row);
 	      $excel->getActiveSheet()->getStyle('E'.$numrow)->applyFromArray($style_row);
+	      $excel->getActiveSheet()->getStyle('F'.$numrow)->applyFromArray($style_row);
+	      $excel->getActiveSheet()->getStyle('G'.$numrow)->applyFromArray($style_row);
+
 	   
 	      
 	      $no++; // Tambah 1 setiap kali looping
@@ -125,6 +138,8 @@ class Excel_aplikasi extends CI_Controller {
 	    $excel->getActiveSheet()->getColumnDimension('C')->setWidth(20); 
 	    $excel->getActiveSheet()->getColumnDimension('D')->setWidth(20); 
 	    $excel->getActiveSheet()->getColumnDimension('E')->setWidth(20);
+	    $excel->getActiveSheet()->getColumnDimension('F')->setWidth(25);
+	    $excel->getActiveSheet()->getColumnDimension('G')->setWidth(20);
 
 	    
 	    // Set height semua kolom menjadi auto (mengikuti height isi dari kolommnya, jadi otomatis)
@@ -134,11 +149,11 @@ class Excel_aplikasi extends CI_Controller {
 	    // Set orientasi kertas jadi LANDSCAPE
 	    $excel->getActiveSheet()->getPageSetup()->setOrientation(PHPExcel_Worksheet_PageSetup::ORIENTATION_LANDSCAPE);
 	    // Set judul file excel nya
-	    $excel->getActiveSheet(0)->setTitle("Data Aplikasi");
+	    $excel->getActiveSheet(0)->setTitle("Surat Keluar");
 	    $excel->setActiveSheetIndex(0);
 	    // Proses file excel
 	    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-	    header('Content-Disposition: attachment; filename="Laporan Data Aplikasi.xlsx"'); // Set nama file excel nya
+	    header('Content-Disposition: attachment; filename="Laporan Surat Keluar.xlsx"'); // Set nama file excel nya
 	    header('Cache-Control: max-age=0');
 	    $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
 	    $write->save('php://output');

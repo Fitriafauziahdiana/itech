@@ -6,14 +6,19 @@
 					<div class="box">
 						<div class="box-header bg-yellow"><i class="fas fa-file-archive"></i> Detail Big Data</div>
 						<div class="box-body">
-							<div class="col-md-12 text-center">
-								<a href="<?php echo base_url('./media/bigdata1/'.$views['berkas1']) ?>" title="File Big Data">
-									<h1 style="font-size: 100px;"><i class="fas fa-file-pdf"></i></h1>
+
+							<div class="col-md-6 text-right">
+								<a href="<?php echo base_url('./media/bigdata/'.$views['berkas']) ?>" title="File Big Data">
+								<h1 style="font-size: 100px;"><i class="fas fa-file-archive"></i></h1>
 								</a>
-								<a href="<?php echo base_url('./media/bigdata2/'.$views['berkas2']) ?>" title="File Big Data">
-									<h1 style="font-size: 100px;"><i class="fas fa-file-pdf"></i></h1>
+								<h4>Foto Kegiatan</h4>
+							</div>
+
+							<div class="col-md-6 text-left">
+								<a href="<?php echo base_url('./media/bigdata/'.$views['berkas2']) ?>" title="File Big Data">
+								<h1 style="font-size: 100px;"><i class="fas fa-file-archive"></i></h1>
 								</a>
-								<h4><?php echo $views['namakegiatan'] ?></h4>
+								<h4>Data Peserta</h4>
 							</div>
 
 							<div class="col-md-12" style="margin-top: 20px;">

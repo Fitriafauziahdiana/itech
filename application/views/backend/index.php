@@ -50,8 +50,8 @@
 
 	            <div class="info-box-content">
 				<p></p>
-	              <span class="info-box-text">Nilai Siswa</span>
-	              <span class="info-box-number"><?php echo $nilai ?></span>
+	              <span class="info-box-text">Data Multimedia</span>
+	              <span class="info-box-number"><?php echo $multimedia ?></span>
 	            </div>
 
 	          </div>
@@ -66,8 +66,8 @@
 
 	            <div class="info-box-content">
 				<p></p>
-	              <span class="info-box-text">Bank Soal</span>
-	              <span class="info-box-number"><?php echo $soal ?></span>
+	              <span class="info-box-text">Data Publikasi</span>
+	              <span class="info-box-number"><?php echo $publikasi ?></span>
 	            </div>
 				</div>
 				

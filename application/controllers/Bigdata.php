@@ -3,7 +3,7 @@ class Bigdata extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model(['Mod_surat','Mod_helper','Mod_master']);
+		$this->load->model(['Mod_bigdata','Mod_helper','Mod_master']);
 
 		if($this->session->userdata('level') != "Admin"){
             redirect(base_url('Login'));
@@ -14,7 +14,7 @@ class Bigdata extends CI_Controller {
 	{
 		$data = array(
 			'title' => "Integraltechnology",
-			'bigdata' => $this->Mod_surat->read_bigdata(),
+			'bigdata' => $this->Mod_bigdata->read_bigdata(),
 			'jeniskegiatan' => $this->Mod_master->get_jeniskegiatan(),
 		);
 
@@ -30,7 +30,7 @@ class Bigdata extends CI_Controller {
 		$id = $this->uri->segment(3);
 		$data = array(
 			'title' => "Integraltechnology",
-			'views' => $this->Mod_surat->views($id)->row_array(),
+			'views' => $this->Mod_bigdata->views($id)->row_array(),
 		);
 
 		$this->load->view('tmp_site/index', $data);
@@ -45,7 +45,7 @@ class Bigdata extends CI_Controller {
 		$id = $this->uri->segment(3);
 		$data = array(
 			'title' => "Integraltechnology",
-			'views' => $this->Mod_surat->views($id)->row_array(),
+			'views' => $this->Mod_bigdata->views($id)->row_array(),
 		);
 
 		$this->load->view('tmp_site/index', $data);
@@ -64,25 +64,20 @@ class Bigdata extends CI_Controller {
 			$bidangpenyelenggara	= $this->input->post('bidangpenyelenggara');
 			$jumlahpeserta	= $this->input->post('jumlahpeserta');//
 			$linksertifikat 	= $this->input->post('linksertifikat');
-			$berkas1		= $_FILES['berkas1']['name'];
+			$berkas		= $_FILES['berkas']['name'];
 			$berkas2		= $_FILES['berkas2']['name'];
 
-			$config['upload_path'] 		= './media/bigdata1/';
-			$config['allowed_types'] 	= 'gif|jpg|png|pdf|doc|docx|xls|xlsx|rar|zip|tar';
+			$config['upload_path'] 		= './media/bigdata/';
+			$config['allowed_types'] 	= 'jpeg|jpg|png|pdf|doc|';
 			$config['max_size']  		= 2000;
 			$config['max_width']  		= 1024;
 			$config['max_height']  		= 768;
 
-			$config['upload_path'] 		= './media/bigdata2/';
-			$config['allowed_types'] 	= 'gif|jpg|png|pdf|doc|docx|xls|xlsx|rar|zip|tar';
-			$config['max_size']  		= 2000;
-			$config['max_width']  		= 1024;
-			$config['max_height']  		= 768;
 			
 			$this->load->library('upload', $config);
 			
-			if ( ! $this->upload->do_upload('berkas1', 'berkas2')){
-				 echo "<script> alert('Maaf, File Gagal Di Upload.') </script>"; die(redirect('aplikasi','refresh'));
+			if ( ! $this->upload->do_upload('berkas', 'berkas2')){
+				 echo "<script> alert('Maaf, File Gagal Di Upload.') </script>"; die(redirect('bigdata','refresh'));
 			}
 			else{
 				$data = array('upload_data' => $this->upload->data());
@@ -96,11 +91,11 @@ class Bigdata extends CI_Controller {
 				'bidangpenyelenggara' 		=> $bidangpenyelenggara,
 				'jumlahpeserta'		=> $jumlahpeserta,
 				'linksertifikat' 		=> $linksertifikat,
-				'berkas1' 		=> $berkas1,
+				'berkas' 		=> $berkas,
 				'berkas2' 		=> $berkas2,
 			);
 
-			$this->Mod_surat->add_bigdata($data);
+			$this->Mod_bigdata->add_bigdata($data);
 			redirect('Bigdata');
 		}
 	}
@@ -115,7 +110,7 @@ class Bigdata extends CI_Controller {
 			$bidangpenyelenggara	= $this->input->post('bidangpenyelenggara');
 			$jumlahpeserta	= $this->input->post('jumlahpeserta');
 			$linksertifikat 	= $this->input->post('linksertifikat');
-			$berkas1		= $this->input->post('berkas1');
+			$berkas		= $this->input->post('berkas');
 			$berkas2		= $this->input->post('berkas2');
 
 			$data = array(
@@ -126,12 +121,12 @@ class Bigdata extends CI_Controller {
 				'bidangpenyelenggara' 		=> $bidangpenyelenggara,
 				'jumlahpeserta'		=> $jumlahpeserta,
 				'linksertifikat' 		=> $linksertifikat,
-				'berkas1' 		=> $berkas1,
+				'berkas' 		=> $berkas,
 				'berkas2' 		=> $berkas2,
 			);
 
 			$this->db->where('id', $id);
-			$this->Mod_surat->update_bigdata($data);
+			$this->Mod_bigdata->update_bigdata($data);
 			redirect('Bigdata');
 		}
 	}
@@ -139,7 +134,7 @@ class Bigdata extends CI_Controller {
 	public function delete()
 	{
 		$id = $this->uri->segment(3);
-		$this->Mod_surat->delete_bigdata($id, 'bigdata');
+		$this->Mod_bigdata->delete_bigdata($id, 'bigdata');
 		redirect('Bigdata');
 	}
 
