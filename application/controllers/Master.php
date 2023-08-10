@@ -66,53 +66,7 @@ class Master extends CI_Controller {
 		$this->load->view('master/jeniskegiatan');
 		$this->load->view('tmp_site/footer');
 	}
-
-
-
-
-	// proses tambah & hapus
-	public function add_pelajaran()
-	{
-		if(isset($_POST['submit'])){
-			$data = array(
-				'kode' => $this->input->post('kode'),
-				'mapel' => $this->input->post('mapel')
-			);
-
-			$this->Mod_master->add_mapel($data);
-			redirect('Master/pelajaran');
-		}
-	}
-
-	public function del_mapel()
-	{
-		$id = $this->uri->segment(3);
-		$this->Mod_master->delete_mapel($id, 'tb_pelajaran');
-		redirect('Master/pelajaran');
-	}
-
-
-	public function add_jurusan()
-	{
-		if(isset($_POST['submit'])){
-			$data = array(
-				'kode' => $this->input->post('kode'),
-				'jurusan' => $this->input->post('jurusan')
-			);
-
-			$this->Mod_master->add_jurusan($data);
-			redirect('Master/jurusan');
-		}
-	}
-
-	public function del_jurusan()
-	{
-		$id = $this->uri->segment(3);
-		$this->Mod_master->delete_jurusan($id, 'tb_jurusan');
-		redirect('Master/jurusan');
-	}
-
-
+	
 	public function add_users()
 	{
 		if(isset($_POST['submit'])){

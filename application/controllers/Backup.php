@@ -13,6 +13,7 @@ class Backup extends CI_Controller {
 	{
 		$data = array(
 			'title' => "Integraltechnology",
+			
 		);
 
 		$this->load->view('tmp_site/index', $data);
@@ -31,7 +32,7 @@ class Backup extends CI_Controller {
 		write_file('/', $backup);
 
 		$this->load->helper('download');
-		force_download('db_arsip.sql', $backup);
+		force_download('db_itech.sql', $backup);
 	}
 
 }

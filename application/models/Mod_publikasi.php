@@ -16,6 +16,10 @@ class Mod_publikasi extends CI_Model {
 		return $publikasi->result();
 	}
 
+	public function view($id){
+		return $this->db->get_where('publikasi', array('id' => $id));
+	}
+
 	public function detail($id){
 		return $this->db->get_where('publikasi', array('id' => $id));
 	}

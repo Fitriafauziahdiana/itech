@@ -40,6 +40,20 @@ class Multimedia extends CI_Controller {
 		$this->load->view('tmp_site/footer');
 	}
 
+	public function detail()
+	{
+		$id = $this->uri->segment(3);
+		$data = array(
+			'title' => "Integraltechnology",
+			'view' => $this->Mod_multimedia->view($id)->row_array(),
+		);
+
+		$this->load->view('tmp_site/index', $data);
+		$this->load->view('tmp_site/nav');
+		$this->load->view('tmp_site/sidebar');
+		$this->load->view('multimedia/detail');
+		$this->load->view('tmp_site/footer');
+	}
 	public function add()
 	{
 		if(isset($_POST['submit'])){
@@ -87,6 +101,18 @@ class Multimedia extends CI_Controller {
 		$id = $this->uri->segment(3);
 		$this->Mod_multimedia->delete($id, 'multimedia');
 		redirect('Multimedia');
+	}
+
+	public function pdf()
+	{
+		$this->load->view('pdf_multimedia');
+		$data['multimedia'] = $this->Mod_multimedia->read();
+		$this->load->library('pdf');
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->filename = "laporan-data-multimedia.pdf";
+		$this->pdf->load_view('pdf_multimedia', $data);
+
+
 	}
 
 }

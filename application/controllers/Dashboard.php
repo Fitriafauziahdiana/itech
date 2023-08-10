@@ -1,5 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+
 class Dashboard extends CI_Controller {
 
 	function __construct(){
@@ -9,7 +10,7 @@ class Dashboard extends CI_Controller {
             redirect(base_url('Login'));
         }
 
-        $this->load->model(['Mod_helper','Mod_aplikasi', 'Mod_services','Mod_publikasi', 'Mod_multimedia','Mod_perusahaan']);
+        $this->load->model(['Mod_helper','Mod_aplikasi', 'Mod_services','Mod_publikasi', 'Mod_multimedia']);
 	}
 
 	public function index()
@@ -21,7 +22,6 @@ class Dashboard extends CI_Controller {
 			'services' => $this->Mod_services->count_services(),
 			'publikasi' => $this->Mod_publikasi->count_publikasi(),
 			'multimedia' => $this->Mod_multimedia->count_multimedia(),
-			'perusahaan' => $this->Mod_perusahaan->get_perusahaan(),
 		);
 
 		$this->load->view('tmp_site/index', $data);

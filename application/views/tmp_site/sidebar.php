@@ -3,7 +3,8 @@
 		<!-- user panel -->
 		<<div class="user-panel">
 			<div class="logo" align="center">
-				<img src="<?php echo base_url() ?>media\img\logos.png" width="110" height="auto" class="img-responsive" alt="Logo" style="margin-top: -5px;margin-bottom: 10px;">
+				<img src="<?php echo base_url() ?>media\img\logo3.png" width="110" height="auto" class="img-responsive" alt="Logo" style="margin-top: -5px;margin-bottom: 10px;">
+				<link href="<?php echo base_url('assets/img/Integral.png') ?>" rel="icon" />
 			</div>
 		</div>
 		<!-- Akhir user panel -->
@@ -28,7 +29,6 @@
 				<ul class="treeview-menu">
 					<li><a href="<?php echo base_url('Master/jeniskegiatan') ?>">Master Jenis Kegiatan</a></li>
 					<li><a href="<?php echo base_url('Master/users') ?>">Master Users</a></li>
-					<li><a href="<?php echo base_url('Perusahaan/update/'.'1') ?>">Profil Perusahaan</a></li>
 				</ul>
 			</li>
 

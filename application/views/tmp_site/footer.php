@@ -4,6 +4,7 @@
 			<p>Integraltechnology-bpsdmjabar v 1.0</p>
 		</div>
 		<strong>Copyright &copy; 2023 <a href="https://bpsdm.jabarprov.go.id">Infobpsdmprovjabar</a>.</strong> All rights reserved.
+		<link href="<?php echo base_url('assets/img/Integral.png') ?>" rel="icon" />
 	</footer>
 	<!-- akhir footer -->
 

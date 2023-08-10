@@ -41,6 +41,20 @@ class Publikasi extends CI_Controller {
 		$this->load->view('tmp_site/footer');
 	}
 
+	public function detail()
+	{
+		$id = $this->uri->segment(3);
+		$data = array(
+			'title' => "Integraltechnology",
+			'view' => $this->Mod_publikasi->view($id)->row_array(),
+		);
+
+		$this->load->view('tmp_site/index', $data);
+		$this->load->view('tmp_site/nav');
+		$this->load->view('tmp_site/sidebar');
+		$this->load->view('publikasi/detail');
+		$this->load->view('tmp_site/footer');
+	}
 	public function add()
 	{
 		if(isset($_POST['submit'])){
@@ -95,4 +109,15 @@ class Publikasi extends CI_Controller {
 		redirect('publikasi');
 	}
 
+	public function pdf()
+	{
+		$this->load->view('pdf_publikasi');
+		$data['publikasi'] = $this->Mod_publikasi->read();
+		$this->load->library('pdf');
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->filename = "laporan-data-publikasi.pdf";
+		$this->pdf->load_view('pdf_publikasi', $data);
+
+
+	}
 }

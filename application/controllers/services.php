@@ -1,4 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+
 class Services extends CI_Controller {
 
 	function __construct(){
@@ -64,7 +66,7 @@ class Services extends CI_Controller {
 			$bk 		= $_FILES['bk']['name'];
 
 			$config['upload_path'] 		= './media/services/';
-			$config['allowed_types'] 	= 'doc|docx';
+			$config['allowed_types'] 	= 'doc|docx|pdf';
 			$config['max_size']  		= 20000;
 			$config['max_width']  		= 10240;
 			$config['max_height']  		= 7680;
@@ -130,6 +132,19 @@ class Services extends CI_Controller {
 		$id = $this->uri->segment(3);
 		$this->Mod_services->delete($id, 'services');
 		redirect('Services');
+	}
+
+
+	public function pdf()
+	{
+		$this->load->view('pdf_services');
+		$data['services'] = $this->Mod_services->read();
+		$this->load->library('pdf');
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->filename = "laporan-data-services.pdf";
+		$this->pdf->load_view('pdf_services', $data);
+
+
 	}
 
 

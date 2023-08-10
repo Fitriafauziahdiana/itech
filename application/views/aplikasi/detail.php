@@ -7,7 +7,7 @@
 						<div class="box-header bg-yellow"><i class="fas fa-file-archive"></i> Detail Aplikasi</div>
 						<div class="box-body">
 							<div class="col-md-12 text-center">
-								<h4>RICIAN APLIKASI KEGIATAN</h4>
+								<h4>RINCIAN DATA APLIKASI </h4>
 							</div>
 							<div class="col-md-12" style="margin-top: 20px;">
 								<form class="form-horizontal">

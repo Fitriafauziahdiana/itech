@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit ('No direct script access allowed');
 class Mod_services extends CI_Model {
 
 	public function add($data){
@@ -30,5 +30,5 @@ class Mod_services extends CI_Model {
         $services = $query->num_rows();
         return $services;
 	}
-
+	
 }

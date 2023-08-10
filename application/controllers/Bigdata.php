@@ -138,4 +138,16 @@ class Bigdata extends CI_Controller {
 		redirect('Bigdata');
 	}
 
+	public function pdf()
+	{
+		$this->load->view('pdf_bigdata');
+		$data['bigdata'] = $this->Mod_bigdata->read_bigdata();
+		$this->load->library('pdf');
+		$this->pdf->setPaper('A4', 'landscape');
+		$this->pdf->filename = "laporan-data-bigdata.pdf";
+		$this->pdf->load_view('pdf_bigdata', $data);
+
+
+	}
+
 }

@@ -16,6 +16,7 @@ class Aplikasi extends CI_Controller {
 		$data = array(
 			'title' => "Integraltechnology",
 			'aplikasi' => $this->Mod_aplikasi->read_aplikasi(),
+			
 		);
 
 		$this->load->view('tmp_site/index', $data);
@@ -63,11 +64,7 @@ class Aplikasi extends CI_Controller {
 			$deskripsi	= $this->input->post('deskripsi');
 			$link_aplikasi 	= $this->input->post('link_aplikasi');
 
-			$config['upload_path'] 		= './media/suratmasuk/';
-			$config['allowed_types'] 	= 'gif|jpg|png|pdf|doc|docx|xls|xlsx|rar|zip|tar';
-			$config['max_size']  		= 2000;
-			$config['max_width']  		= 1024;
-			$config['max_height']  		= 768;
+			
 
 			$data = array(
 				'tanggal' => $tanggal,
@@ -110,5 +107,16 @@ class Aplikasi extends CI_Controller {
 		redirect('Aplikasi');
 	}
 
+	public function pdf()
+	{
+		$this->load->view('pdf_aplikasi');
+		$data['aplikasi'] = $this->Mod_aplikasi->read_aplikasi();
+		$this->load->library('pdf');
+		$this->pdf->setPaper('A4', 'landscape');
+		$this->pdf->filename = "laporan-data-aplikasi.pdf";
+		$this->pdf->load_view('pdf_aplikasi', $data);
+
+
+	}
 	
 }

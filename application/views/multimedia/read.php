@@ -2,7 +2,9 @@
 
 	<div class="content-header">
 		<a href="#exampleModal" data-toggle="modal" class="btn btn-flat btn-primary btn-sm"><i class="fas fa-plus-square"></i> Tambah</a>
+		<a href="<?php echo base_url('multimedia/pdf') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
 	</div>
+
 
 
 	<!-- Isi Kontent -->
@@ -48,13 +50,16 @@
 												$('#modal').modal('show');
 											});
 											</script>
-											<a href="<?php echo base_url('Multimedia/cetak/'. $row->id) ?>" title="Download"
-											 class="btn btn-sm btn-warning"><i class="fas fa-cloud-download-alt "></i></a>
-														
+											
+
+											<a href="<?php echo base_url('Multimedia/detail/'. $row->id) ?>" title="Update">
+												<button class="btn btn-flat btn-sm btn-primary"><i class="fas fa-eye"></i></button>
+											</a>
 
 											<a href="<?php echo base_url('Multimedia/update/'. $row->id) ?>" title="Update">
 												<button class="btn btn-flat btn-sm btn-success"><i class="fas fa-edit"></i></button>
 											</a>
+
 
 											<a href="<?php echo base_url('Multimedia/delete/'. $row->id) ?>">
 												<button onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini ?')" class="btn btn-flat btn-sm btn-danger" title="Delete"><i class="fa fa-user-times"></i></button>

@@ -16,6 +16,10 @@ class Mod_multimedia extends CI_Model {
 		return $multimedia->result();
 	}
 
+	public function view($id){
+		return $this->db->get_where('multimedia', array('id' => $id));
+	}
+
 	public function detail($id){
 		return $this->db->get_where('multimedia', array('id' => $id));
 	}
