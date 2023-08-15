@@ -65,7 +65,6 @@ class Bigdata extends CI_Controller {
 			$jumlahpeserta	= $this->input->post('jumlahpeserta');//
 			$linksertifikat 	= $this->input->post('linksertifikat');
 			$berkas		= $_FILES['berkas']['name'];
-			$berkas2		= $_FILES['berkas2']['name'];
 
 			$config['upload_path'] 		= './media/bigdata/';
 			$config['allowed_types'] 	= 'jpeg|jpg|png|pdf|doc|docx';
@@ -91,8 +90,7 @@ class Bigdata extends CI_Controller {
 				'bidangpenyelenggara' 		=> $bidangpenyelenggara,
 				'jumlahpeserta'		=> $jumlahpeserta,
 				'linksertifikat' 		=> $linksertifikat,
-				'berkas' 		=> $berkas,
-				'berkas2' 		=> $berkas2
+				'berkas' 		=> $berkas
 			);
 
 			$this->Mod_bigdata->add_bigdata($data);
@@ -111,7 +109,7 @@ class Bigdata extends CI_Controller {
 			$jumlahpeserta	= $this->input->post('jumlahpeserta');
 			$linksertifikat 	= $this->input->post('linksertifikat');
 			$berkas		= $this->input->post('berkas');
-			$berkas2		= $this->input->post('berkas2');
+
 
 			$data = array(
 				'id'			=> $id,
@@ -121,8 +119,7 @@ class Bigdata extends CI_Controller {
 				'bidangpenyelenggara' 		=> $bidangpenyelenggara,
 				'jumlahpeserta'		=> $jumlahpeserta,
 				'linksertifikat' 		=> $linksertifikat,
-				'berkas' 		=> $berkas,
-				'berkas2' 		=> $berkas2
+				'berkas' 		=> $berkas
 			);
 
 			$this->db->where('id', $id);

@@ -2,8 +2,9 @@
 
 	<div class="content-header">
 		<a href="#exampleModal" data-toggle="modal" class="btn btn-flat btn-primary btn-sm"><i class="fas fa-plus-square"></i> Tambah</a>
-		<a href="<?php echo base_url('services/pdf') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
-		<link href="<?php echo base_url('assets/img/Integral.png') ?>" rel="icon" />
+		<a href="<?php echo base_url('Files') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-upload "></i> Upload File</a>
+		<a href="<?php echo base_url('services/pdf') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
+		
 		
 	</div>
 
@@ -18,14 +19,15 @@
 					<div class="box-body table-responsive">
 						<table class="table table-bordered table-striped data">
 							<thead>
+							<td align=center >
 								<tr>
-									<th>No</th>
+									<th >No</th>
 									<th>Tanggal</th>
 									<th>Nama Kegiatan</th>
                                     <th>Jumlah Peserta</th>
-                                    <th>Unduh</th>
 									<th><i class="fas fa-cogs"></i></th>
 								</tr>
+							</td>	
 							</thead>
 							<tbody>
 								<?php $no=1; foreach ($services as $key=>$row){ ?>
@@ -34,11 +36,7 @@
 										<td><?php echo $row->tgl_kegiatan ?></td>
 										<td><?php echo $row->nama_kegiatan ?></td>
                                         <td><?php echo $row->jumlah_peserta?></td>
-                                        <td align="center">
-                                            <a href="<?php echo base_url('./media/services/'. $row->berkas) ?>" title="Download" class="btn btn-sm btn-warning"><i class="fas fa-cloud-download-alt "></i> Jadwal Kegiatan</a>
-
-                                            <a href="<?php echo base_url('./media/services/'. $row->bk) ?>" title="Download" class="btn btn-sm btn-primary"><i class="fas fa-cloud-download-alt "></i> Data Peserta</a>
-                                        </td>
+                                        
 										<td width="15%" align="center">
 											<a href="<?php echo base_url('services/detail/'. $row->id) ?>" title="Update">
 												<button class="btn btn-flat btn-sm btn-primary"><i class="fas fa-eye"></i></button>
@@ -99,18 +97,7 @@
         		</div>
         	</div>
 
-        	<div class="form-group">
-        		<label for="berkas" class="control-label col-md-3">Upload Jadwal Kegiatan :</label>
-        		<div class="col-md-9">
-        			<input type="file" class="form-control" name="berkas" id="berkas" required>
-        		</div>
-        	</div>
-            <div class="form-group">
-                <label for="bk" class="control-label col-md-3">Upload Data Peserta :</label>
-                <div class="col-md-9">
-                    <input type="file" class="form-control" name="bk" id="bk" required>
-                </div>
-            </div>
+        
       </div>
       <div class="modal-footer">
         <button type="submit" name="submit" class="btn btn-flat btn-primary"><i class="fas fa-save"></i> SIMPAN</button>

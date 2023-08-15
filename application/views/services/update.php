@@ -29,18 +29,7 @@
 				        		</div>
 				        	</div>
 				        
-				        	<div class="form-group">
-				        		<label for="berkas" class="control-label col-md-3">Upload Jadwal Kegiatan :</label>
-				        		<div class="col-md-9">
-				        			<input type="text" class="form-control" name="berkas" id="berkas" value="<?php echo $detail['berkas'] ?>" autocomplete="off" required>
-				        		</div>
-				        	</div>
-				            <div class="form-group">
-				                <label for="bk" class="control-label col-md-3">Upload Data Peserta :</label>
-				                <div class="col-md-9">
-				                   <input type="text" class="form-control" name="bk" id="bk" value="<?php echo $detail['bk'] ?>" autocomplete="off" required>
-				                </div>
-				            </div>
+				        
 				        	<div class="form-group">
 				        		<label for="" class="control-label col-md-3"></label>
 				        		<div class="col-md-8">

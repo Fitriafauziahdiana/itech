@@ -12,6 +12,7 @@
 					<div class="box-body table-responsive">
 						<table class="table table-bordered table-striped data">
 							<thead>
+							<td align=center >	
 								<tr>
 									<th>No</th>
 									<th>Nama Lengkap</th>
@@ -19,6 +20,7 @@
 									<th>Password</th>
 									<th><i class="fas fa-cogs"></i></th>
 								</tr>
+							</td>
 							</thead>
 							<tbody>
 								<?php $no=1; foreach($users as $key=>$row){ ?>

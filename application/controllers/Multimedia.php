@@ -108,7 +108,7 @@ class Multimedia extends CI_Controller {
 		$this->load->view('pdf_multimedia');
 		$data['multimedia'] = $this->Mod_multimedia->read();
 		$this->load->library('pdf');
-		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->setPaper('A4', 'landscape');
 		$this->pdf->filename = "laporan-data-multimedia.pdf";
 		$this->pdf->load_view('pdf_multimedia', $data);
 

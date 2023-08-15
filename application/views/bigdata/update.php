@@ -54,12 +54,6 @@
                                     <input type="text" class="form-control" name="berkas" id="berkas" value="<?php echo $views['berkas'] ?>" autocomplete="off" readonly>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="berkas2" class="control-label col-md-3 text-right"> Upload Data Peserta :</label>
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control" name="berkas2" id="berkas2" value="<?php echo $views['berkas2'] ?>" autocomplete="off" readonly>
-                                </div>
-                            </div>
                              <div class="form-group">
                                 <label class="control-label col-md-3 text-right"></label>
                                 <div class="col-md-8">

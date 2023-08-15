@@ -11,34 +11,6 @@ class Master extends CI_Controller {
         }
 	}
 
-	public function pelajaran()
-	{
-		$data = array(
-			'title' => "Integraltechnology",
-			'mapel' => $this->Mod_master->get_mapel(),
-		);
-
-		$this->load->view('tmp_site/index', $data);
-		$this->load->view('tmp_site/nav');
-		$this->load->view('tmp_site/sidebar');
-		$this->load->view('master/pelajaran');
-		$this->load->view('tmp_site/footer');
-	}
-
-	public function jurusan()
-	{
-		$data = array(
-			'title' => "Integraltechnology",
-			'jurusan' => $this->Mod_master->get_jurusan(),
-		);
-
-		$this->load->view('tmp_site/index', $data);
-		$this->load->view('tmp_site/nav');
-		$this->load->view('tmp_site/sidebar');
-		$this->load->view('master/jurusan');
-		$this->load->view('tmp_site/footer');
-	}
-
 	public function users()
 	{
 		$data = array(

@@ -2,7 +2,7 @@
 
 	<div class="content-header">
 		<a href="#exampleModal" data-toggle="modal" class="btn btn-flat btn-primary btn-sm"><i class="fas fa-plus-square"></i> Tambah</a>
-		<a href="<?php echo base_url('publikasi/pdf') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
+		<a href="<?php echo base_url('publikasi/pdf') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
 	</div>
 	
 
@@ -17,6 +17,7 @@
 					<div class="box-body table-responsive">
 						<table class="table table-bordered table-striped data">
 							<thead>
+							<td align=center >
 								<tr>
 									<th>No</th>
 									<th>Tanggal</th>
@@ -26,6 +27,7 @@
 									<th>Link Publikasi Eksternal</th>
                                     <th><i class="fas fa-cogs"></i></th>
 								</tr>
+							</td>
 							</thead>
 							<tbody>
 								<?php $no=1; foreach ($publikasi as $key=>$row){ ?>
@@ -38,7 +40,7 @@
                                         <td><?php echo $row->linkekster ?></td>
 										<td align="center">
 										<script>
-											// cetak absensi
+											// cetak kegiatan
 											$('.cetak_kegiatan').on('click',function(){
 												var id= $(this).attr("id");
 												$.ajax({

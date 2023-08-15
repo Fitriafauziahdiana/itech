@@ -30,5 +30,5 @@ class Mod_services extends CI_Model {
         $services = $query->num_rows();
         return $services;
 	}
-	
+
 }

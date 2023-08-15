@@ -6,7 +6,7 @@
 		<div class="row">
 		<div class="col-md-6 col-sm-9 col-xs-15">
 	          <div class="info-box">
-	            <span class="info-box-icon bg-blue"><i class="fas fa-file-archive"></i></span>
+	            <span class="info-box-icon bg-red"><i class="fas fa-file-archive"></i></span>
 
 	            <div class="info-box-content">
 					<p></p>
@@ -19,7 +19,7 @@
 
 			<div class="col-md-6 col-sm-9 col-xs-15">
 	          <div class="info-box">
-	            <span class="info-box-icon bg-green"><i class="fas fa-envelope"></i></span>
+	            <span class="info-box-icon bg-blue"><i class="fas fa-envelope"></i></span>
 
 	            <div class="info-box-content">
 					<p></p>
@@ -32,7 +32,7 @@
 
 			<div class="col-md-6 col-sm-9 col-xs-15">
 	          <div class="info-box">
-	            <span class="info-box-icon bg-green"><i class="fas fa-envelope-open"></i></span>
+	            <span class="info-box-icon bg-yellow"><i class="fas fa-envelope-open"></i></span>
 
 	            <div class="info-box-content">
 				<p></p>
@@ -46,7 +46,7 @@
 
 	        <div class="col-md-6 col-sm-9 col-xs-15">
 	          <div class="info-box">
-	            <span class="info-box-icon bg-yellow"><i class="fa fa-envelope-o"></i></span>
+	            <span class="info-box-icon bg-green"><i class="fa fa-envelope-o"></i></span>
 
 	            <div class="info-box-content">
 				<p></p>
@@ -62,7 +62,7 @@
 		<div class="row">
 			<div class="col-md-6 col-sm-9 col-xs-15">
 	          <div class="info-box">
-	            <span class="info-box-icon bg-yellow"><i class="fas fa-file-alt"></i></span>
+	            <span class="info-box-icon bg-green"><i class="fas fa-file-alt"></i></span>
 
 	            <div class="info-box-content">
 				<p></p>

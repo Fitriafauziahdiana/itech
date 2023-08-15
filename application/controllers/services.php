@@ -1,6 +1,4 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-
-
 class Services extends CI_Controller {
 
 	function __construct(){
@@ -62,40 +60,11 @@ class Services extends CI_Controller {
 			$jumlah_peserta	= $this->input->post('jumlah_peserta');
 			$nama_kegiatan  	= $this->input->post('nama_kegiatan');
 			$tgl_kegiatan 		= $this->input->post('tgl_kegiatan');
-			$berkas 		= $_FILES['berkas']['name'];
-			$bk 		= $_FILES['bk']['name'];
-
-			$config['upload_path'] 		= './media/services/';
-			$config['allowed_types'] 	= 'doc|docx|pdf';
-			$config['max_size']  		= 20000;
-			$config['max_width']  		= 10240;
-			$config['max_height']  		= 7680;
-			
-			$this->load->library('upload', $config);
-			
-			if ( ! $this->upload->do_upload('berkas')){
-				 echo "<script> alert('Maaf, File Gagal Di Upload.') </script>"; die(redirect('services','refresh'));
-			}
-			else{
-				$data = array('upload_data' => $this->upload->data());
-				echo "success";
-			}
-
-
-			if ( ! $this->upload->do_upload('bk')){
-				 echo "<script> alert('Maaf, File Gagal Di Upload.') </script>"; die(redirect('services','refresh'));
-			}
-			else{
-				$data = array('upload_data' => $this->upload->data());
-				echo "success";
-			}
 
 			$data = array(
 				'jumlah_peserta' 	=> $jumlah_peserta,
 				'nama_kegiatan' 	=> $nama_kegiatan,
-				'tgl_kegiatan' 	=> $tgl_kegiatan,
-				'berkas'		=> $berkas,
-				'bk'			=> $bk
+				'tgl_kegiatan' 	=> $tgl_kegiatan
 			);
 
 			$this->Mod_services->add($data);
@@ -110,22 +79,20 @@ class Services extends CI_Controller {
 			$jumlah_peserta	= $this->input->post('jumlah_peserta');
 			$nama_kegiatan  	= $this->input->post('nama_kegiatan');
 			$tgl_kegiatan 		= $this->input->post('tgl_kegiatan');
-			$berkas 		= $this->input->post('berkas');
-			$bk		= $this->input->post('bk');
+
 
 			$data = array(
 				'id'			=> $id,
 				'jumlah_peserta' 	=> $jumlah_peserta,
 				'nama_kegiatan' 	=> $nama_kegiatan,
-				'tgl_kegiatan' 	=> $tgl_kegiatan,
-				'berkas'		=> $berkas,
-				'bk'			=> $bk
+				'tgl_kegiatan' 	=> $tgl_kegiatan
 			);
 			$this->db->where('id', $id);
 			$this->Mod_services->update($data);
 			redirect('Services');
 		}
 	}
+	
 
 	public function delete()
 	{
@@ -134,6 +101,7 @@ class Services extends CI_Controller {
 		redirect('Services');
 	}
 
+	
 
 	public function pdf()
 	{
@@ -146,6 +114,5 @@ class Services extends CI_Controller {
 
 
 	}
-
 
 }

@@ -2,7 +2,7 @@
 
 	<div class="content-header">
 		<a href="#exampleModal" data-toggle="modal" class="btn btn-flat btn-primary btn-sm"><i class="fas fa-plus-square"></i> Tambah</a>
-		<a href="<?php echo base_url('multimedia/pdf') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
+		<a href="<?php echo base_url('multimedia/pdf') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
 	</div>
 
 
@@ -17,6 +17,7 @@
 					<div class="box-body table-responsive">
 						<table class="table table-bordered table-striped data">
 							<thead>
+							<td align=center >
 								<tr>
 									<th>No</th>
 									<th>Tanggal</th>
@@ -24,6 +25,7 @@
 									<th>Link Video</th>
 									<th><i class="fas fa-cogs"></i></th>
 								</tr>
+							</td>
 							</thead>
 							<tbody>
 								<?php $no=1; foreach ($multimedia as $key=>$row){ ?>

@@ -2,8 +2,8 @@
 
 	<div class="content-header">
 		<a href="#exampleModal" data-toggle="modal" class="btn btn-flat btn-primary btn-sm"><i class="fas fa-plus-square"></i> Tambah</a>
-		<a href="<?php echo base_url('bigdata/pdf') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
-		<link href="<?php echo base_url('assets/img/Integral.png') ?>" rel="icon" />
+		<a href="<?php echo base_url('Files') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-upload "></i> Upload File</a>
+		<a href="<?php echo base_url('bigdata/pdf') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
 	</div>
 
 
@@ -17,6 +17,7 @@
 					<div class="box-body table-responsive">
 						<table class="table table-bordered table-striped data">
 							<thead>
+							<td align=center >
 								<tr>
 									<th>No</th>
 									<th>Tanggal</th>
@@ -25,9 +26,10 @@
                                     <th>Bidang Penyelenggara</th>
 									<th>Jumlah Peserta</th>
 									<th>Link Sertifikat</th>
-									<th>Download</th>
+									<th>Gambar</th>
 									<th><i class="fas fa-cogs"></i></th>
 								</tr>
+							</td>
 							</thead>
 							<tbody>
 								<?php $no=1; foreach ($bigdata as $key=>$row){ ?>
@@ -42,18 +44,9 @@
 										<td align="center">
 
 											<a href="<?php echo base_url('./media/bigdata/'. $row->berkas) ?>" title="Download" 
-											class="btn btn-sm btn-warning"><i class="fas fa-cloud-download-alt "></i> Foto</a> 
+											class="btn btn-sm btn-warning"><i class="fa fa-file-image-o "></i>  Gambar</a> 
 
-											<p></p>
-
-											<a href="<?php echo base_url('./media/bigdata/'. $row->berkas2) ?>" title="Download" 
-											class="btn btn-sm btn-primary"><i class="fas fa-cloud-download-alt "></i> Data</a> 
-											
 											<td width="15%" align="center">
-
-											<td align="center">
-
-											
 
 											<a href="<?php echo base_url('Bigdata/detail/'. $row->id) ?>" title="Update">
 												<button class="btn btn-flat btn-sm btn-primary"><i class="fas fa-eye"></i></button>

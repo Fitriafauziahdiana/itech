@@ -114,7 +114,7 @@ class Publikasi extends CI_Controller {
 		$this->load->view('pdf_publikasi');
 		$data['publikasi'] = $this->Mod_publikasi->read();
 		$this->load->library('pdf');
-		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->setPaper('A4', 'landscape');
 		$this->pdf->filename = "laporan-data-publikasi.pdf";
 		$this->pdf->load_view('pdf_publikasi', $data);
 

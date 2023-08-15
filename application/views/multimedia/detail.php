@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 	<section class="content">
-		
+	<a href="<?php echo base_url('multimedia') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fa fa-arrow-left "></i> Kembali</a>
 		<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<div class="box">
