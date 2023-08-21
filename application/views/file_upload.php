@@ -13,7 +13,7 @@
 
 <div class="container">
 <a href="<?php echo base_url('services') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fa fa-arrow-left "></i> Kembali</a>
-	<h1 class="page-header text-center">File Data Kegiatan dan Peserta</h1>
+	<h1 class="page-header text-center">File Data Peserta dan Kegiatan</h1>
 		
 	<div class="row">
 		<div class="col-sm-4">

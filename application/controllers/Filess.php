@@ -16,7 +16,7 @@ class Filess extends CI_Controller {
 		$this->load->library('session');
 		//fetch all filess i the database
 		$data['filess'] = $this->filess_model->getAllFiless();
-		$this->load->view('file_uploadd', $data);
+		$this->load->view('file_uploads', $data);
 	}
  
 	public function insert(){
@@ -25,7 +25,7 @@ class Filess extends CI_Controller {
  
 	 	//Check if file is not empty
         if(!empty($_FILES['upload']['name'])){
-            $config['upload_path'] = 'uploadd/';
+            $config['upload_path'] = 'uploads/';
             //restrict uploads to this mime types
             $config['allowed_types'] = 'gif|jpg|png|pdf|doc|docx|xls|xlsx|rar|zip|tar';
             $config['file_name'] = $_FILES['upload']['name'];
@@ -53,19 +53,20 @@ class Filess extends CI_Controller {
                 }   
  
             }else{
-                header('location:'.base_url().$this->Index());
-                $this->session->set_flashdata('Succes','upload file.'); 
-          }
-      }else{
-          header('location:'.base_url().$this->Index());
-          $this->session->set_flashdata('Succes','upload file.');
-      }
-
-  }
+              	header('location:'.base_url().$this->Index());
+              	$this->session->set_flashdata('Succes','upload file.'); 
+            }
+        }else{
+            header('location:'.base_url().$this->Index());
+            $this->session->set_flashdata('Succes','upload file.');
+        }
+ 
+	}
+ 
 	public function download($id){
         $this->load->helper('download');
         $fileinfo = $this->filess_model->download($id);
-        $file = 'uploadd/'.$fileinfo['filename'];
+        $file = 'uploads/'.$fileinfo['filename'];
         force_download($file, NULL);
 	}
 

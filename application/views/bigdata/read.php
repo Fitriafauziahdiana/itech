@@ -2,10 +2,9 @@
 
 	<div class="content-header">
 		<a href="#exampleModal" data-toggle="modal" class="btn btn-flat btn-primary btn-sm"><i class="fas fa-plus-square"></i> Tambah</a>
-		<a href="<?php echo base_url('Files') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-upload "></i> Upload File</a>
+		<a href="<?php echo base_url('Filess') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-upload "></i> Upload File</a>
 		<a href="<?php echo base_url('bigdata/pdf') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
 	</div>
-
 
 	<!-- Isi Kontent -->
 	<section class="content container-fluid">
@@ -133,12 +132,6 @@
         		<label for="berkas" class="control-label col-md-3">Upload Foto Kegiatan  :</label>
         		<div class="col-md-9">
         			<input type="file" class="form-control" name="berkas" id="berkas" required>
-        		</div>
-        	</div>
-			<div class="form-group">
-        		<label for="berkas2" class="control-label col-md-3">Upload Data Peserta :</label>
-        		<div class="col-md-9">
-        			<input type="file" class="form-control" name="berkas2" id="berkas2" required>
         		</div>
         	</div>
       </div>
