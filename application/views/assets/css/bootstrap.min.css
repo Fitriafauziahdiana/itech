@@ -513,32 +513,26 @@ progress {
 .imgpublikasi-fluid{
   max-width: 80%;
   height: auto;
-  margin-top: 80px;
 }
 .imgaplikasi-fluid{
   max-width: 80%;
   height: auto;
-  margin-top: 80px;
 }
 .imgbigdata-fluid{
   max-width: 80%;
   height: auto;
-  margin-top: 80px;
 }
 .imgelearning-fluid{
   max-width: 80%;
   height: auto;
-  margin-top: 80px;
 }
 .imgmultimedia-fluid{
-  max-width: 80%;
+  width: 100%;
   height: auto;
-  margin-top: 80px;
 }
 .imgeservice-fluid{
   max-width: 100%;
   height: auto;
-  margin-top: 90px;
 }
 .imgabout-fluid{
   max-width: 100%;
@@ -6890,7 +6884,7 @@ fieldset:disabled .btn {
   background-color: #dc3545 !important;
 }
 .bg-light {
-  background-color: #2f5677 !important;
+  background-color: #006638 !important;
 }
 .bg-dark {
   background-color: #111 !important;
@@ -10065,4 +10059,19 @@ fieldset:disabled .btn {
   .d-print-none {
     display: none !important;
   }
+  .cards {
+    width: 100%;
+    max-width: 820px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  card{
+    margin-right: 25px;
+    background-color: red;
+  }
+
 }

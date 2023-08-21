@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="assets/img/Integral.png" rel="icon" />
+    <link href="<?=base_url()?>/assets/img/Integral.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,14 +31,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Libraries Stylesheet -->
-    <link href="assets/lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="<?=base_url()?>/assets/lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="<?=base_url()?>/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?=base_url()?>/assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="<?=base_url()?>/assets/css/style.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -57,13 +58,13 @@
         <span></span>
       </div>
       <nav
-        class="navbar navbar-expand-lg bg-white navbar-light fixed-top scrolling-navbar p-0 px-4 px-lg-5"
+        class="navbar navbar-expand-lg navbar-light fixed-top bgcolor p-0 px-4 px-lg-5-"
       >
         <a href="index.html" class="navbar-brand d-flex align-items-center">
           <h2 class="m-0 text-primary">
             <img
               class="imglogo-fluid me-2"
-              src="assets/img/Integral.png"
+              src="<?=base_url()?>/assets/img/integraloutlinewhite.png"
               alt=""
               style="width: 100px"
             />
@@ -82,17 +83,9 @@
             <li class="nav-item">
               <a class="nav-link page-scroll" href="#home">Beranda</a>
             </li>
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Integral</a>
-              <div class="dropdown-menu navbar-nav shadow-sm m-0">
-                <a href="#eservice" class="dropdown-item page-scroll">E-service</a>
-                <a href="#multimedia" class="dropdown-item page-scroll">Multimedia</a>
-                <a href="#elearning" class="dropdown-item page-scroll">E-learning</a>
-                <a href="#bigdata" class="dropdown-item page-scroll">Big Data</a>
-                <a href="#aplikasi" class="dropdown-item page-scroll">Aplikasi</a>
-                <a href="#publikasi" class="dropdown-item page-scroll">Publikasi</a>
-              </div>
-          </div>
+            <li class="nav-item">
+              <a class="nav-link page-scroll" href="#integral">Integral</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link page-scroll" href="#contact">Kontak</a>
             </li>
@@ -120,7 +113,7 @@
               <img
                 class="img-fluid animated pulse infinite"
                 style="animation-duration: 3s"
-                src="assets/img/intro.png"
+                src="<?=base_url()?>/assets/img/intro.png"
                 alt=""
               />
             </div>
@@ -133,179 +126,93 @@
 
 
     <!-- Integral Start -->
-
-    <!-- eservice -->
-    <section id="eservice" class="section">
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6 animated fadeIn">
-              <img class="imgabout-fluid animated pulse infinite" 
-              style="animation-duration: 3s;"
-              src="assets/img/Integral E-Services.png" alt="" />
+    <section id="integral" class="cards">
+      <div class="container-tmp">
+        <div class="card-tmp">
+            <div class="face-tmp face1-tmp">
+                <div class="content-tmp">
+                    <img src="<?=base_url()?>/assets/img/Integral E-Services.png">
+                    <h3></h3>
+                </div>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
-              <div class="h-100">
-                <h1 class="display-6"></h1>
-                <p class="text-primary fs-5 mb-4">
-                </p>
-                <p class="text-justify">
-                  Berfungsi untuk melakukan proses Pelayanan Administrasi Penyelenggaraan Pelatihan mulai dari registrasi sampai dengan sertifikasi.
-                </p>
-                </p>
-                <p class="mb-4">
-                </p>
-              </div>
+            <div class="face-tmp face2-tmp">
+                <div class="content-tmp">
+                    <p class="text-justify">Berfungsi untuk melakukan proses Pelayanan Administrasi Penyelenggaraan Pelatihan mulai dari registrasi sampai dengan sertifikasi.</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- end eservice -->
-
-    <!-- multimedia -->
-    <section id="multimedia" class="section">
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6 animated fadeIn">
-              <img class="imgmultimedia-fluid animated pulse infinite"
-              style="animation-duration: 3s;"
-              src="assets/img/Integral Multimedia.png" alt=""/>
+        <div class="card-tmp">
+            <div class="face-tmp face1-tmp">
+                <div class="content-tmp">
+                    <img src="<?=base_url()?>/assets/img/Integral Multimedia.png">
+                    <h3></h3>
+                </div>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
-              <div class="h-100">
-                <h1 class="display-6"></h1>
-                <p class="text-primary fs-5 mb-4">
-                </p>
-                <p class="text-justify">
-                  Berfungsi untuk pendokumentasian setiap kegiatan BPSDM,e-Sertifikat, 
-                  pembuatan video bahan ajar Widyaiswara, serta pembuatan konten publikasi.
-                </p>
-                <p class="mb-4">
-                </p>
-              </div>
+            <div class="face-tmp face2-tmp">
+                <div class="content-tmp">
+                    <p class="text-justify">Berfungsi untuk pendokumentasian setiap kegiatan BPSDM, e-Sertifikat, dan pembuatan video bahan ajar Widyaiswara, serta pembuatan konten publikasi.</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- end multimedia -->
-
-    <!-- elearning -->
-    <section id="elearning" class="section">
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6 animated fadeIn">
-              <img class="imgelearning-fluid animated pulse infinite"
-              style="animation-duration: 3s;"
-              src="assets/img/Integral elearning.png" alt=""/>
+        <div class="card-tmp">
+            <div class="face-tmp face1-tmp">
+                <div class="content-tmp">
+                    <img src="<?=base_url()?>/assets/img/Integral elearning.png">
+                    <h3></h3>
+                </div>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
-              <div class="h-100">
-                <h1 class="display-6"></h1>
-                <p class="text-primary fs-5 mb-4">
-                </p>
-                <p class="text-justify">
-                  Berfungsi untuk mengelola Pembelajaran yang ada baik internal
-                 maupun external BPSDM.
-                </p>
-                <p class="mb-4">
-                </p>
-              </div>
+            <div class="face-tmp face2-tmp">
+                <div class="content-tmp">
+                    <p class="text-justify">Berfungsi untuk mengelola Pembelajaran yang ada baik internal maupun external.</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- end elearning -->
-
-    <!-- bigdata -->
-    <section id="bigdata" class="section">
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6 animated fadeIn">
-              <img class="imgbigdata-fluid animated pulse infinite"
-              style="animation-duration: 3s;"
-              src="assets/img/Integral Big Data.png" alt=""/>
+    </div>
+</section>
+<section class="cards2">
+  <div class="container-tmp">
+    <div class="card-tmp">
+        <div class="face-tmp face1-tmp">
+            <div class="content-tmp">
+                <img src="<?=base_url()?>/assets/img/Integral Big Data.png">
+                <h3></h3>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
-              <div class="h-100">
-                <h1 class="display-6"></h1>
-                <p class="text-primary fs-5 mb-4">
-                </p>
-                <p class="text-justify">
-                  Berfungsi untuk menghimpun data keseluruhan 
-                  aktifitas yang ada di BPSDM.
-                </p>
-                <p class="mb-4">
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- end bigdata -->
-
-    <!-- aplikasi -->
-    <section id="aplikasi" class="section">
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6 animated fadeIn">
-              <img class="imgaplikasi-fluid animated pulse infinite"
-              style="animation-duration: 3s;"
-              src="assets/img/Integral Aplikasi.png" alt=""/>
+        <div class="face-tmp face2-tmp">
+            <div class="content-tmp">
+                <p class="text-justify">Berfungsi untuk menghimpun data keseluruhan aktifitas yang ada di BPSDM</p>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
-              <div class="h-100">
-                <h1 class="display-6"></h1>
-                <p class="text-primary fs-5 mb-4">
-                </p>
-                <p class="text-justify">
-                  Berfungsi untuk mengelola, memfasilitasi dan menerapkan aplikasi-aplikasi untuk mendukung proses learning secara mudah, lancar dan tersampaikan dengan baik. Memberikan laporan berkenaan dengan aplikasi yang ada di BPSDM Provinsi Jawa Barat.
-                </p>
-                <p class="mb-4">
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- end aplikasi -->
-
-    <!-- publikasi -->
-    <section id="publikasi" class="section">
-      <div class="container-xxl py-5">
-        <div class="container">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6 animated fadeIn">
-              <img class="imgpublikasi-fluid animated pulse infinite"
-              style="animation-duration: 3s;"
-              src="assets/img/Integral publikasi.png" alt=""/>
+    </div>
+    <div class="card-tmp">
+        <div class="face-tmp face1-tmp">
+            <div class="content-tmp">
+                <img src="<?=base_url()?>/assets/img/Integral Aplikasi.png">
+                <h3></h3>
             </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-              <div class="h-100">
-                <h1 class="display-6"></h1>
-                <p class="text-primary fs-5 mb-4">
-                </p>
-                <p class="text-justify">
-                  Berfungsi untuk mengolah serta mempublikasikan informasi terkait kegiatan BPSDM Serta infomasi lainnya yang berhubungan dengan pengembangan Sumber Daya Manusia skala Nasional dan Internasional secara elektronik dan media cetak.
-                </p>
-                <p class="mb-4">
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- end publikasi -->
-
+        <div class="face-tmp face2-tmp">
+            <div class="content-tmp">
+                <p class="text-justify">Berfungsi untuk mengelola,memfasilitasi dan menerapkan aplikasi untuk mendukung proses learning secara mudah,lancar dan tersampaikan dengan baik.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-tmp">
+        <div class="face-tmp face1-tmp">
+            <div class="content-tmp">
+                <img src="<?=base_url()?>/assets/img/Integral publikasi.png">
+                <h3></h3>
+            </div>
+        </div>
+        <div class="face-tmp face2-tmp">
+            <div class="content-tmp">
+                <p class="text-justify">Berfungsi untuk mengelola Pembelajaran yang ada baik internal maupun external.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+    
     <!-- Integral End -->
 
     <!-- Contact Start -->
@@ -336,7 +243,7 @@
               <img
                 class="imgkontak-fluid animated pulse infinite"
                 style="animation-duration: 3s"
-                src="assets/img/01.png"
+                src="<?=base_url()?>/assets/img/01.png"
                 alt=""
               />
             </div>
@@ -396,13 +303,19 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="<?=base_url()?>/assets/lib/wow/wow.min.js"></script>
+    <script src="<?=base_url()?>/assets/lib/easing/easing.min.js"></script>
+    <script src="<?=base_url()?>/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="<?=base_url()?>/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?=base_url()?>/assets/lib/counterup/counterup.min.js"></script>
+    
 
     <!-- Template Javascript -->
-    <script src="assets/js/main.js"></script>
+    <script src="<?=base_url()?>/assets/js/main.js"></script>
+    <script>
+      $(window).scroll(function(){
+        $('nav').toggleClass('scrolled',$(this).scrollTop()>50);
+      });
+    </script>
   </body>
 </html>

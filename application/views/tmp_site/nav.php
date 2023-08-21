@@ -17,10 +17,6 @@
 		<!-- Menu Kanan -->
 		<div class="navbar-custom-menu">
 			<ul class="nav navbar-nav">
-				<!-- Pesan -->
-
-				<!-- Akhir Pesan -->
-
 				<!-- akun user -->
 				<li class="dropdown user user-menu">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -46,11 +42,7 @@
 						</li>
 					</ul>
 				</li>
-				<!-- Akhir akun user -->
 			</ul>
-			
 		</div>
-		<!-- Akhir Menu Kanan -->
 	</nav>
-	<!-- Akhir Navbar Header -->
 </header>
