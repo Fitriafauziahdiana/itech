@@ -4,7 +4,7 @@ class Publikasi extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model(['Mod_publikasi','Mod_helper']);
+		$this->load->model(['Mod_publikasi']);
 
 		if($this->session->userdata('level') != "Admin"){
             redirect(base_url('Login'));

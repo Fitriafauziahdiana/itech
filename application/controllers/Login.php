@@ -4,7 +4,6 @@ class Login extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('Mod_login');
-        $this->load->model('Mod_helper');
 	}
 
 
@@ -38,9 +37,9 @@ class Login extends CI_Controller {
 
          	if($mysession['level'] == 'Admin'){
          		redirect('Dashboard'); die();
-         	}elseif($mysession['level'] == 'User'){
-         		redirect('Dashboard/user'); die();
-         	}
+         	}elseif($password != $password){
+				echo "<script> alert('Maaf, Password Tidak Sama.') </script>"; die(redirect('Login','refresh'));
+		   }
          }
         else{
         	redirect('Login');

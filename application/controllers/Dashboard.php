@@ -10,7 +10,7 @@ class Dashboard extends CI_Controller {
             redirect(base_url('Login'));
         }
 
-        $this->load->model(['Mod_helper','Mod_aplikasi', 'Mod_services','Mod_publikasi', 'Mod_multimedia']);
+        $this->load->model(['Mod_aplikasi', 'Mod_services','Mod_publikasi', 'Mod_multimedia']);
 	}
 
 	public function index()

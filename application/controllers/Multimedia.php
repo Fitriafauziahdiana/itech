@@ -4,7 +4,7 @@ class Multimedia extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model(['Mod_multimedia','Mod_helper']);
+		$this->load->model(['Mod_multimedia']);
 
 		if($this->session->userdata('level') != "Admin"){
             redirect(base_url('Login'));

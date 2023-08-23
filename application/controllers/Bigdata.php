@@ -3,7 +3,7 @@ class Bigdata extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->load->model(['Mod_bigdata','Mod_helper','Mod_master']);
+		$this->load->model(['Mod_bigdata','Mod_master']);
 
 		if($this->session->userdata('level') != "Admin"){
             redirect(base_url('Login'));
