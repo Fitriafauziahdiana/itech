@@ -53,7 +53,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #999;
+  color: #a8a3a3;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -85,7 +85,7 @@ h6,
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  color: #999;
+  color: #fff;
 }
 h1,
 .h1 {
@@ -6663,6 +6663,10 @@ fieldset:disabled .btn {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
+.py-6 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
 .pt-0 {
   padding-top: 0 !important;
 }
@@ -6878,7 +6882,7 @@ fieldset:disabled .btn {
   background-color: #0dcaf0 !important;
 }
 .bg-warning {
-  background-color: #ffc107 !important;
+  background-color: #009954 !important;
 }
 .bg-danger {
   background-color: #dc3545 !important;

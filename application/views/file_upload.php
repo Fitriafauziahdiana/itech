@@ -59,7 +59,7 @@
 							<td><?php echo $file->id; ?></td>
 							<td><?php echo $file->filename; ?></td>
 							<td><?php echo $file->description; ?></td>
-							<td><a href="<?php echo base_url().'files/download/'.$file->id; ?>" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-download-alt"></a></td>
+							<td><a href="<?php echo base_url().'files/download/'.$file->id; ?>" class="btn btn-success"title="download"><i class="fa fa-user-times"></i> Download</button>
                             <td width="10%" align="center">
 							<a href="<?php echo base_url('files/del_file/'.$file->id) ?>">
 							<button onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini ?')" class="btn btn-flat btn-sm btn-danger" title="Delete"><i class="fa fa-user-times"></i> Hapus</button>

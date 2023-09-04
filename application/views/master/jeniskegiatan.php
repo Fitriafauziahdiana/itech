@@ -21,7 +21,8 @@
 							</td>
 							</thead>
 							<tbody>
-								<?php $no=1; foreach($jeniskegiatan as $key=>$row){ ?>
+								<?php $no=1; 
+								foreach($jeniskegiatan as $key=>$row){ ?>
 								<tr>
 									<td><?php echo $no++ ?></td>
 									<td><?php echo $row->jeniskegiatan ?></td>
@@ -43,7 +44,7 @@
 
 
 
-<!-- Modal Tambah Surat Masuk -->
+<!-- Modal Tambah  -->
 <form action="<?php echo base_url('Master/add_jeniskegiatan') ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

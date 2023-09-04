@@ -3,7 +3,7 @@
 		<!-- user panel -->
 		<<div class="user-panel">
 			<div class="logo" align="center">
-				<img src="<?php echo base_url() ?>media\img\logo3.png" width="110" height="auto" class="img-responsive" alt="Logo" style="margin-top: -5px;margin-bottom: 10px;">
+				<img src="<?php echo base_url() ?>media\img\logo01.png" width="110" height="auto" class="img-responsive" alt="Logo" style="margin-top: -5px;margin-bottom: 10px;">
 				<link href="<?php echo base_url('assets/img/Integral.png') ?>" rel="icon" />
 			</div>
 		</div>
@@ -19,6 +19,7 @@
 			<li><a href="<?php echo base_url('Bigdata') ?>"><i class="fas fa-envelope-open"></i> <span>Big Data</span></a></li>
 			<li><a href="<?php echo base_url('Multimedia') ?>"><i class="fas fa-clipboard-list "></i> <span>Multimedia</span></a></li>
 			<li><a href="<?php echo base_url('Publikasi') ?>"><i class="fas fa-file-alt"></i> <span>Publikasi</span></a></li>
+			<li><a href="<?php echo base_url('Arsip') ?>"><i class="fas fa-file-alt"></i> <span>E-arsip</span></a></li>
 			
 			<li class="treeview">
 				<a href=""><i class="fas fa-cogs"></i> <span>Master Apps</span>

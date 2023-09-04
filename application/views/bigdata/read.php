@@ -86,6 +86,8 @@
         </button>
       </div>
       <div class="modal-body">
+
+	  <!-- liatt -->
 	  <div class="form-group">
         		<label for="jeniskegiatan" class="control-label col-md-3">Jenis Kegiatan :</label>
         		<div class="col-md-9">

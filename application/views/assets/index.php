@@ -8,7 +8,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="<?=base_url()?>/assets/img/Integral.png" rel="icon" />
+    <link href="<?=base_url()?>/assets/assets/img/Integral.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -94,7 +94,7 @@
       <!-- Navbar End -->
 
       <!-- Home Start -->
-      <div class="container-fluid hero-header bg-light py-5 mb-5">
+      <div class="container-fluid hero-header bg-light py-6 mb-5">
         <div class="container py-5">
           <div class="row g-5 align-items-center">
             <div class="col-lg-6">
@@ -112,7 +112,7 @@
               <img
                 class="img-fluid animated pulse infinite"
                 style="animation-duration: 3s"
-                src="<?=base_url()?>/assets/img/intro.png"
+                src="<?=base_url()?>/assets/assets/img/intro.png"
                 alt=""
               />
             </div>
@@ -130,7 +130,7 @@
         <div class="card-tmp">
             <div class="face-tmp face1-tmp">
                 <div class="content-tmp">
-                    <img src="<?=base_url()?>/assets/img/Integral E-Services.png">
+                    <img src="<?=base_url()?>/assets/assets/img/Integral E-Services.png">
                     <h3></h3>
                 </div>
             </div>
@@ -143,7 +143,7 @@
         <div class="card-tmp">
             <div class="face-tmp face1-tmp">
                 <div class="content-tmp">
-                    <img src="<?=base_url()?>/assets/img/Integral Multimedia.png">
+                    <img src="<?=base_url()?>/assets/assets/img/Integral Multimedia.png">
                     <h3></h3>
                 </div>
             </div>
@@ -156,7 +156,7 @@
         <div class="card-tmp">
             <div class="face-tmp face1-tmp">
                 <div class="content-tmp">
-                    <img src="<?=base_url()?>/assets/img/Integral elearning.png">
+                    <img src="<?=base_url()?>/assets/assets/img/Integral elearning.png">
                     <h3></h3>
                 </div>
             </div>
@@ -173,7 +173,7 @@
     <div class="card-tmp">
         <div class="face-tmp face1-tmp">
             <div class="content-tmp">
-                <img src="<?=base_url()?>/assets/img/Integral Big Data.png">
+                <img src="<?=base_url()?>/assets/assets/img/Integral Big Data.png">
                 <h3></h3>
             </div>
         </div>
@@ -186,7 +186,7 @@
     <div class="card-tmp">
         <div class="face-tmp face1-tmp">
             <div class="content-tmp">
-                <img src="<?=base_url()?>/assets/img/Integral Aplikasi.png">
+                <img src="<?=base_url()?>/assets/assets/img/Integral Aplikasi.png">
                 <h3></h3>
             </div>
         </div>
@@ -199,7 +199,7 @@
     <div class="card-tmp">
         <div class="face-tmp face1-tmp">
             <div class="content-tmp">
-                <img src="<?=base_url()?>/assets/img/Integral publikasi.png">
+                <img src="<?=base_url()?>/assets/assets/img/Integral publikasi.png">
                 <h3></h3>
             </div>
         </div>
@@ -216,15 +216,16 @@
 
     <!-- Contact Start -->
     <section id="contact" class="section">
-      <div class="container py-5">
+      <div class="container-fluid hero-header py-5 mb-5"></div>
+      <div class="container-fluid hero-header bg-warning py-6 mb-5">
         <div class="container">
           <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="col-lg-6">
               <h1 class="display-6">Kontak</h1>
-              <p class="text-primary fs-5">
+              <h1 class="text-primary fs-5">
                 Silakan kontak kami jika ada hal yang kiranya perlu kami bantu.
-                Terimakasih
-              </p>
+                Terimakasih</h1>
+              </h1>
               <p class="mb-2 "><i class="bi bi-geo-alt-fill"></i> Alamat:</p>
               <h4>Jl. Kolonel Masturi No.11, KM 3,5
                 Cipageran, Cimahi Utara,
@@ -242,7 +243,7 @@
               <img
                 class="imgkontak-fluid animated pulse infinite"
                 style="animation-duration: 3s"
-                src="<?=base_url()?>/assets/img/01.png"
+                src="<?=base_url()?>/assets/assets/img/01.png"
                 alt=""
               />
             </div>
@@ -253,7 +254,7 @@
             <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
               
             </div>
-            
+            </div>
                   </div>
                 </div>
               </form>
@@ -302,15 +303,15 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?=base_url()?>/lib/wow/wow.min.js"></script>
-    <script src="<?=base_url()?>/lib/easing/easing.min.js"></script>
-    <script src="<?=base_url()?>/lib/waypoints/waypoints.min.js"></script>
-    <script src="<?=base_url()?>/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="<?=base_url()?>/lib/counterup/counterup.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
     
 
     <!-- Template Javascript -->
-    <script src="<?=base_url()?>/assets/js/main.js"></script>
+    <script src="<?=base_url()?>/assets/assets/js/main.js"></script>
     <script>
       $(window).scroll(function(){
         $('nav').toggleClass('scrolled',$(this).scrollTop()>50);
