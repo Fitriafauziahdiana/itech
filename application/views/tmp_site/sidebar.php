@@ -43,7 +43,7 @@
 <!-- 
 <li class="treeview">
 				<ul class="treeview-menu">
-					<li><a href="<?php echo base_url() ?>">Surat Masuk</a></li>
+					<li><a href="<?php echo base_url() ?>"></a></li>
 					<li><a href="<?php echo base_url('Pangkalan/siaga') ?>">Pangkalan Siaga</a></li>
 					<li><a href="<?php echo base_url('Pangkalan/penggalang') ?>">Pangkalan Penggalang</a></li>
 					<li><a href="<?php echo base_url('Pangkalan/penegak') ?>">Pangkalan Penegak</a></li>
