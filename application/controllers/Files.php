@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
- 
+
+
+// <!-- UPLOAD FILE MENU E-SERVICE -->
+
 class Files extends CI_Controller {
  
 	function  __construct() {

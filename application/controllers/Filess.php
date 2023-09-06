@@ -1,6 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
- 
+
+
+// <!-- UPLOAD FILE MENU BIGDATA -->
+
 class Filess extends CI_Controller {
  
 	function  __construct() {

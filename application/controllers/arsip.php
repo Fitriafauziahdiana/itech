@@ -12,104 +12,87 @@ class Arsip extends CI_Controller {
 
 	public function index()
 	{
-		$data = array(
+		$file = array(
 			'title' => "Integraltechnology",
 			'arsip' => $this->Mod_arsip->read(),
 		);
 
-		$this->load->view('tmp_site/index', $data);
+		$this->load->view('tmp_site/index', $file);
 		$this->load->view('tmp_site/nav');
 		$this->load->view('tmp_site/sidebar');
 		$this->load->view('arsip/read');
 		$this->load->view('tmp_site/footer');
 	}
 
-	public function update()
-	{
-		$id = $this->uri->segment(3);
-		$data = array(
-			'title' => "Integraltechnology",
-			'detail' => $this->Mod_arsip->detail($id)->row_array(),
-		);
-
-		$this->load->view('tmp_site/index', $data);
-		$this->load->view('tmp_site/nav');
-		$this->load->view('tmp_site/sidebar');
-		$this->load->view('arsip/update');
-		$this->load->view('tmp_site/footer');
-	}
-
-	public function detail()
-	{
-		$id = $this->uri->segment(3);
-		$data = array(
-			'title' => "Integraltechnology",
-			'detail' => $this->Mod_arsip->detail($id)->row_array(),
-		);
-
-		$this->load->view('tmp_site/index', $data);
-		$this->load->view('tmp_site/nav');
-		$this->load->view('tmp_site/sidebar');
-		$this->load->view('arsip/detail');
-		$this->load->view('tmp_site/footer');
-	}
-
-	public function add()
-	{
-		if(isset($_POST['submit'])){
-			$nama_kegiatan  	= $this->input->post('nama_kegiatan');
-			$tgl_kegiatan 		= $this->input->post('tgl_kegiatan');
-
-			$data = array(
-				'nama_kegiatan' 	=> $nama_kegiatan,
-				'tgl_kegiatan' 	=> $tgl_kegiatan
-			);
-
-			$this->Mod_arsip->add($data);
-			redirect('arsip');
-		}
-	}
-
-	public function update_arsip()
-	{
-		if(isset($_POST['submit'])){
-			$id 			= $this->input->post('id');
-			$nama_kegiatan  	= $this->input->post('nama_kegiatan');
-			$tgl_kegiatan 		= $this->input->post('tgl_kegiatan');
-
-
-			$data = array(
-				'id'			=> $id,
-				'nama_kegiatan' 	=> $nama_kegiatan,
-				'tgl_kegiatan' 	=> $tgl_kegiatan
-			);
-			$this->db->where('id', $id);
-			$this->Mod_arsip->update($data);
-			redirect('arsip');
-		}
-	}
-	
-
-	public function delete()
-	{
-		$id = $this->uri->segment(3);
-		$this->Mod_arsip->delete($id, 'arsip');
-		redirect('arsip');
-	}
-
-	
-
 	public function pdf()
 	{
 		$this->load->view('pdf_arsip');
-		$data['arsip'] = $this->Mod_arsip->read();
+		$file['arsip'] = $this->Mod_arsip->read();
 		$this->load->library('pdf');
 		$this->pdf->setPaper('A4', 'potrait');
 		$this->pdf->filename = "laporan-data-arsip.pdf";
-		$this->pdf->load_view('pdf_arsip', $data);
+		$this->pdf->load_view('pdf_arsip', $file);
 
 
 	}
 
-	
+	public function insert(){
+		//load session library to use flashdata
+		$this->load->library('session');
+ 
+	 	//Check if file is not empty
+        if(!empty($_FILES['upload']['name'])){
+            $config['upload_path'] = 'upload/';
+            //restrict uploads to this mime types
+            $config['allowed_types'] = 'gif|jpg|png|pdf|doc|docx|xls|xlsx|rar|zip|tar';
+            $config['file_name'] = $_FILES['upload']['name'];
+ 
+            //Load upload library and initialize configuration
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
+ 
+            if($this->upload->do_upload('upload')){
+                $uploadData = $this->upload->data();
+                $filename = $uploadData['file_name'];
+ 
+				//set file data to insert to database
+				$file['description'] = $this->input->post('description');
+				$file['filename'] = $filename;
+ 
+				$query = $this->Mod_arsip->insertfile($file);
+
+                if ( ! $this->upload->do_upload('filename')){
+                     echo "<script> alert('File berhasil upload.') </script>"; die(redirect('arsip','refresh'));
+                }
+                else{
+                    $data = array('upload_data' => $this->upload->data());
+                    echo "success";
+                }   
+ 
+            }else{
+              	header('location:'.base_url().$this->Index());
+              	$this->session->set_flashdata('Succes','upload file.'); 
+            }
+        }else{
+            header('location:'.base_url().$this->Index());
+            $this->session->set_flashdata('Succes','upload file.');
+        }
+ 
+	}
+ 
+	public function download($id){
+        $this->load->helper('download');
+        $fileinfo = $this->Mod_arsip->download($id);
+        $file = 'upload/'.$fileinfo['filename'];
+        force_download($file, NULL);
+	}
+
+
+    public function del_file()
+	{
+		$id = $this->uri->segment(3);
+		$this->Mod_arsip->delete_file($id, 'arsip');
+		redirect('arsip');
+	}
+
 }

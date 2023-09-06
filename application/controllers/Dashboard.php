@@ -10,7 +10,7 @@ class Dashboard extends CI_Controller {
             redirect(base_url('Login'));
         }
 
-        $this->load->model(['Mod_aplikasi', 'Mod_services','Mod_publikasi', 'Mod_multimedia']);
+        $this->load->model(['Mod_aplikasi', 'Mod_services','Mod_publikasi', 'Mod_multimedia', 'Mod_arsip']);
 	}
 
 	public function index()
@@ -22,6 +22,7 @@ class Dashboard extends CI_Controller {
 			'services' => $this->Mod_services->count_services(),
 			'publikasi' => $this->Mod_publikasi->count_publikasi(),
 			'multimedia' => $this->Mod_multimedia->count_multimedia(),
+			'arsip' => $this->Mod_arsip->count_arsip(),
 		);
 
 		$this->load->view('tmp_site/index', $data);

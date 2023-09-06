@@ -13,7 +13,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="box box-solMultimedia">
-					<div class="box-header bg-yellow"><i class="fas fa-envelope"></i> DataAplikasi</div>
+					<div class="box-header bg-yellow"><i class="fas fa-envelope"></i> Data Aplikasi</div>
 					<div class="box-body table-responsive">
 						<table class="table table-bordered table-striped data">
 							<thead>

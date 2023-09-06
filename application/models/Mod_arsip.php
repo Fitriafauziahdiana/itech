@@ -1,14 +1,29 @@
 <?php defined('BASEPATH') OR exit ('No direct script access allowed');
 class Mod_arsip extends CI_Model {
-
-	public function add($data){
-		$this->db->insert('arsip', $data);
-		return true;
-	}	
-
-	public function update($data){
-		$this->db->update('arsip', $data);
+	function __construct(){
+		parent::__construct();
+		$this->load->database();
 	}
+
+
+	public function getAllFiles(){
+		$query = $this->db->get('arsip');
+		return $query->result(); 
+	}
+	public function insertfile($file){
+		return $this->db->insert('arsip', $file);
+	}
+
+	public function download($id){
+		$query = $this->db->get_where('arsip',array('id'=>$id));
+		return $query->row_array();
+	}
+
+	public function delete_file($id){
+		return $this->db->delete('arsip', array('id' => $id));
+	}
+
+	//
 
 	public function read(){
 		$arsip = $this->db->order_by('id', 'DESC');
@@ -16,13 +31,7 @@ class Mod_arsip extends CI_Model {
 		return $arsip->result();
 	}
 
-	public function detail($id){
-		return $this->db->get_where('arsip', array('id' => $id));
-	}
-
-	public function delete($id){
-		return $this->db->delete('arsip', array('id' => $id));
-	}
+	
 
 	public function count_arsip()
 	{

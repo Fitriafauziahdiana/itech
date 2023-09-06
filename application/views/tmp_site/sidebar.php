@@ -14,12 +14,12 @@
 			<li class="header">MENU NAVIGATION</li>
 
 			<li class="active"><a href="<?php echo base_url('Dashboard') ?>"><i class="fas fa-home"></i> <span>Beranda</span></a></li>
-			<li><a href="<?php echo base_url('Services') ?>"><i class="fas fa-file-archive "></i> <span> E-Services</span></a></li>
-			<li><a href="<?php echo base_url('Aplikasi') ?>"><i class="fas fa-envelope "></i> <span> Aplikasi</span></a></li>
-			<li><a href="<?php echo base_url('Bigdata') ?>"><i class="fas fa-envelope-open"></i> <span>Big Data</span></a></li>
-			<li><a href="<?php echo base_url('Multimedia') ?>"><i class="fas fa-clipboard-list "></i> <span>Multimedia</span></a></li>
-			<li><a href="<?php echo base_url('Publikasi') ?>"><i class="fas fa-file-alt"></i> <span>Publikasi</span></a></li>
-			<li><a href="<?php echo base_url('Arsip') ?>"><i class="fas fa-file-alt"></i> <span>E-arsip</span></a></li>
+			<li><a href="<?php echo base_url('Services') ?>"><i class="fas fa-book"></i> <span> E-Services</span></a></li>
+			<li><a href="<?php echo base_url('Aplikasi') ?>"><i class="fab fa-twitch"></i> <span> Aplikasi</span></a></li>
+			<li><a href="<?php echo base_url('Bigdata') ?>"><i class="fas fa-folder-open"></i> <span>Big Data</span></a></li>
+			<li><a href="<?php echo base_url('Multimedia') ?>"><i class="fas fa-clipboard-list"></i> <span>Multimedia</span></a></li>
+			<li><a href="<?php echo base_url('Publikasi') ?>"><i class="fas fa-tags"></i> <span>Publikasi</span></a></li>
+			<li><a href="<?php echo base_url('Arsip') ?>"><i class="fas fa-box-open"></i> <span>E-arsip</span></a></li>
 			
 			<li class="treeview">
 				<a href=""><i class="fas fa-cogs"></i> <span>Master Apps</span>

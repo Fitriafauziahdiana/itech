@@ -1,4 +1,7 @@
 <?php
+
+// <!-- UPLOAD FILE MENU E-SERVICE -->
+
 	class Files_model extends CI_Model {
 		function __construct(){
 			parent::__construct();
