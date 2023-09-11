@@ -56,6 +56,7 @@ class Arsip extends CI_Controller {
                 $filename = $uploadData['file_name'];
  
 				//set file data to insert to database
+				$file['tanggal']	= $this->input->post('tanggal');
 				$file['description'] = $this->input->post('description');
 				$file['filename'] = $filename;
  

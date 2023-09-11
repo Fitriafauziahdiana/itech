@@ -67,7 +67,7 @@ class Publikasi extends CI_Controller {
 			$data = array(
 				'tanggal'		=> $tanggal,
 				'judul_flyer'	=> $judul_flyer,
-				'nama_kegiatan' 			=> $nama_kegiatan,
+				'nama_kegiatan' => $nama_kegiatan,
 				'linkinter'		=> $linkinter,
 				'linkekster'	=> $linkekster
 			);

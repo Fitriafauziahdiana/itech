@@ -21,6 +21,7 @@
     <table style="width:100%">
         <tr>
             <th>No</th>
+            <th>Tanggal</th>
             <th>Nama File</th>
             <th>Nama Kegiatan</th>
         </tr>
@@ -28,6 +29,7 @@
         <?php $no=1; foreach ($arsip as $file){ ?>
             <tr>
                 <td align=center><?php echo $no++ ?></td>
+                <td align=center><?php echo $file->tanggal; ?></td>
                 <td align=center><?php echo $file->filename; ?></td>
                 <td align=center><?php echo $file->description; ?></td>
             </tr>

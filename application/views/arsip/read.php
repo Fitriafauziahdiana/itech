@@ -3,6 +3,7 @@
 	<div class="content-header">
 		<a href="#exampleModal" data-toggle="modal" class="btn btn-flat btn-primary btn-sm"><i class="fas fa-plus-square"></i> Tambah</a>
 		<a href="<?php echo base_url('arsip/pdf') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
+		<a href="<?php echo base_url('') ?>" class="btn btn-flat btn-success btn-sm"><i class="fa fa-search "></i> Filter</a>
 
 
 	</div>
@@ -16,11 +17,12 @@
 				<div class="box box-solid">
 					<div class="box-header bg-yellow"><i class="fas fa-file-archive"></i> Data E-Arsip</div>
 					<div class="box-body table-responsive">
-					<table class="table table-bordered table-striped data">
+						<table class="table table-bordered table-striped data">
 							<thead>
 								<td align=center>
 									<tr>
 										<th>No</th>
+										<th>Tanggal</th>
 										<th>Nama File</th>
 										<th>Nama Kegiatan</th>
 										<th>Download</th>
@@ -29,11 +31,13 @@
 								</td>
 							</thead>
 							<tbody>
-								<?php foreach ($arsip as $file) {
+								<?php $no = 1;
+								foreach ($arsip as $file) {
 
 								?>
 									<tr>
-										<td><?php echo $file->id; ?></td>
+										<td><?php echo $no++ ?></td>
+										<td><?php echo $file->tanggal; ?></td>
 										<td><?php echo $file->filename; ?></td>
 										<td><?php echo $file->description; ?></td>
 										<td><a href="<?php echo base_url() . 'arsip/download/' . $file->id; ?>" class="btn btn-success" title="download"><i class="fa fa-user-times"></i> Download</button>
@@ -74,29 +78,38 @@
 				</div>
 
 				<div>
-						<div class="modal-body">
-							<div class="form-group">
-								<label for="description" class="control-label col-md-3">Nama Kegiatan:</label>
-								<div class="col-md-9">
-									<input type="text" class="form-control" name="description" placeholder="Masukan Nama Kegiatan " autocomplete="off" required>
-								</div>
-							</div>
-						</div>	
-
-						<div class="modal-body">
-							<div class="form-group">
-								<label for="upload" class="control-label col-md-3">File :</label>
-								<div class="col-md-9">
-									<input type="file" class="form-control" name="upload" placeholder="Masukan File" autocomplete="off" required>
-								</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="tanggal" class="control-label col-md-3">Tanggal :</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control tanggal" name="tanggal"  placeholder="Masukan Tanggal" autocomplete="off" required>
 							</div>
 						</div>
+					</div>
+
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="description" class="control-label col-md-3">Nama Kegiatan:</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control" name="description" placeholder="Masukan Nama Kegiatan " autocomplete="off" required>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="upload" class="control-label col-md-3">File :</label>
+							<div class="col-md-9">
+								<input type="file" class="form-control" name="upload" placeholder="Masukan File" autocomplete="off" required>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div>
-						<div class="modal-footer">
-							<button type="submit" name="submit" class="btn btn-flat btn-primary"><i class="fas fa-save"></i> SIMPAN</button>
-						</div>
+					<div class="modal-footer">
+						<button type="submit" name="submit" class="btn btn-flat btn-primary"><i class="fas fa-save"></i> SIMPAN</button>
+					</div>
 				</div>
 			</form>
 		</div>
