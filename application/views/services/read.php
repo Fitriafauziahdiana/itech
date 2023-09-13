@@ -3,9 +3,8 @@
 	<div class="content-header">
 		<a href="#exampleModal" data-toggle="modal" class="btn btn-flat btn-primary btn-sm"><i class="fas fa-plus-square"></i> Tambah</a>
 		<a href="<?php echo base_url('Files') ?>" class="btn btn-flat btn-success btn-sm"><i class="fas fa fa-upload "></i> Upload File</a>
-		<a href="<?php echo base_url('services/pdf') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa fa-download "></i> Export PDF</a>
-		
-		
+		<a href="<?php echo base_url('services/pdf') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa fa-download "></i> PDF</a>
+		<a href="<?php echo base_url('services/filter/') ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa fa-download "></i> Export</a>
 	</div>
 
 

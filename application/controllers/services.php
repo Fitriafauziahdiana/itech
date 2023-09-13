@@ -115,4 +115,14 @@ class Services extends CI_Controller {
 
 	}
 
+	
+	public function filter()
+	{
+		$data = array(
+			'title' => "Integraltechnology",
+			'services' => $this->Mod_services->read(),
+		);
+
+		$this->load->view('services/filter', $data);
+	}
 }
