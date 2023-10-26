@@ -121,7 +121,25 @@ class Services extends CI_Controller {
 		$data = array(
 			'title' => "Integraltechnology",
 			'services' => $this->Mod_services->read(),
+			'tanggal' => $this->Mod_services->gettanggal(),
+			
 		);
+
+		$this->load->view('services/filter', $data);
+	}
+
+
+	public function filter2()
+	{
+		$tanggalawal = $this->input->post('tanggalawal');
+		$tanggalakhir = $this->input->post('tanggalakhir');
+
+		if ($nilaifilter = 1){
+
+			$data ['title'] = "Laporan E-Services";
+			$data ['subtitle'] = "Dari tanggal : ".$tanggalawal. 'Sampai tanggal : '.$tanggalakhir;
+			$data ['datafilter'] = $this->Mod_services->filterbytanggal($tanggalawal, $tanggalakhir);
+		}
 
 		$this->load->view('services/filter', $data);
 	}

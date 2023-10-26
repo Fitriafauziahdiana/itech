@@ -31,4 +31,22 @@ class Mod_services extends CI_Model {
         return $services;
 	}
 
+	public function gettanggal(){
+
+		$services = $this->db->order_by('id', 'DESC');
+		$services = $this->db->get('services');
+		return $services->result();
+	}
+
+
+	public function filterbytanggal($tanggalawal,$tanggalakhir){
+
+		$query = $this-> db->query ("SELECT * FROM services where
+		tgl_kegiatan BETWEEN '$tanggalawal' and '$tanggalakhir' ORDER
+		BY tgl_kegiatan ASC");
+
+		return $query->result();
+	}
+
+
 }

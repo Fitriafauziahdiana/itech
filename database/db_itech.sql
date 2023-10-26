@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Agu 2023 pada 02.50
+-- Waktu pembuatan: 04 Okt 2023 pada 09.27
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -40,9 +40,28 @@ CREATE TABLE `aplikasi` (
 --
 
 INSERT INTO `aplikasi` (`id`, `tanggal`, `nama_aplikasi`, `deskripsi`, `link_aplikasi`) VALUES
-(28, '01-08-2023', 's', 's', 's'),
-(29, '07-08-2023', 's', 's', 's'),
-(30, '16-08-2023', 'asss', 'a', 'as');
+(1, '01-08-2023', 'zoom', 'rapat', 'http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=db_itech&table=aplikasi');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `arsip`
+--
+
+CREATE TABLE `arsip` (
+  `id` int(11) NOT NULL,
+  `tanggal` varchar(255) NOT NULL,
+  `filename` varchar(255) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `arsip`
+--
+
+INSERT INTO `arsip` (`id`, `tanggal`, `filename`, `description`) VALUES
+(14, '31-08-2023', 'Wawancara_untuk_laporan.docx', 'a'),
+(15, '14-09-2023', 'Doa18.docx', 'a');
 
 -- --------------------------------------------------------
 
@@ -58,20 +77,67 @@ CREATE TABLE `bigdata` (
   `bidangpenyelenggara` varchar(255) NOT NULL,
   `jumlahpeserta` varchar(255) NOT NULL,
   `linksertifikat` varchar(255) NOT NULL,
-  `berkas` varchar(100) NOT NULL,
-  `berkas2` varchar(100) NOT NULL
+  `berkas` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `bigdata`
 --
 
-INSERT INTO `bigdata` (`id`, `tanggal`, `jeniskegiatan`, `namakegiatan`, `bidangpenyelenggara`, `jumlahpeserta`, `linksertifikat`, `berkas`, `berkas2`) VALUES
-(29, '08-08-2023', 'Sertifikasi', 'a', 'a', 'a', 'a', 'Picture1.png', 'Doa.docx'),
-(31, '01-08-2023', 'Pelatihan', 'a', 'a', 'a', 'a', 'Picture1.png', 'Doa.docx'),
-(32, '02-08-2023', 'Sertifikasi', 's', 's', 's', 's', 'Doa.docx', 'Picture1.png'),
-(33, '07-08-2023', 'Pelatihan', 's', 's', 's', 's', 'Picture1.png', 'wawancara fix.docx'),
-(35, '02-08-2023', 'Webinar', 'upacara', 'ujang', '112', 'tyasadad', 'Picture1.png', 'Doa.docx');
+INSERT INTO `bigdata` (`id`, `tanggal`, `jeniskegiatan`, `namakegiatan`, `bidangpenyelenggara`, `jumlahpeserta`, `linksertifikat`, `berkas`) VALUES
+(4, '01-08-2023', 'Sertifikasi', 's', 's', 'a', 'a', 'blog-1.jpg'),
+(5, '15-08-2023', 'Sertifikasi', 'a', 'a', 'a', 'a', 'Picture1.png'),
+(6, '31-08-2023', 'Pelatihan', 'lama', 'uajng', '12121', 'asdsadasdas', 'fet3.png'),
+(7, '05-08-2023', 'Pelatihan', 'as', 'as', 'as', 'as', 'about-img.jpeg'),
+(9, '06-09-2023', 'Sertifikasi', 'ada', 'ada', '23', 'file:///C:/Users/ACER/Downloads/Jadwal_Perkuliahan_Ganjil_TIF_2023-2024_(1).pdf', 'Jadwal Perkuliahan Ganjil TIF 2023-2024 (1).pdf'),
+(10, '13-09-2023', 'Pelatihan', 'a', 'afa', '45', 'file:///C:/Users/ACER/Downloads/Jadwal_Perkuliahan_Ganjil_TIF_2023-2024_(1).pdf', 'Picture1.png');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `files`
+--
+
+CREATE TABLE `files` (
+  `id` int(11) NOT NULL,
+  `filename` varchar(150) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `files`
+--
+
+INSERT INTO `files` (`id`, `filename`, `description`) VALUES
+(1, 'TUGAS_GAMBAR-AMOY.docx', 'a'),
+(2, 'Doa.docx', 's'),
+(3, 'Pengujian_Alpha.pdf', 'S'),
+(4, 'Jadwal_Perkuliahan_Ganjil_TIF_2023-2024_(1).pdf', 'ada');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `filess`
+--
+
+CREATE TABLE `filess` (
+  `id` int(11) NOT NULL,
+  `filename` varchar(150) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `filess`
+--
+
+INSERT INTO `filess` (`id`, `filename`, `description`) VALUES
+(1, 'Doa.docx', 'S'),
+(2, 'uzi_uts.docx', 'a'),
+(3, 'Doa1.docx', 'S'),
+(4, 'bpsdm.docx', 'sukukuku'),
+(5, 'bpsdm1.docx', 'asasasas'),
+(6, 'uzi_uts1.docx', 'dddffff'),
+(7, 'LOI_LM.pdf', 'asa');
 
 -- --------------------------------------------------------
 
@@ -91,7 +157,7 @@ CREATE TABLE `multimedia` (
 --
 
 INSERT INTO `multimedia` (`id`, `tanggal`, `namakegiatan`, `linkvideo`) VALUES
-(5, '', 'b', 'b');
+(1, '02-08-2023', 'a', 'a');
 
 -- --------------------------------------------------------
 
@@ -113,7 +179,10 @@ CREATE TABLE `publikasi` (
 --
 
 INSERT INTO `publikasi` (`id`, `nama_kegiatan`, `judul_flyer`, `tanggal`, `linkinter`, `linkekster`) VALUES
-(12, 'a', 'a', '01-08-2023', 'a', 'a');
+(1, 'a', 'a', '01-08-2023', 'a', 'a'),
+(2, 'af', 'a', '08-08-2023', 'a', 'a'),
+(3, 'a', 'a', '12-09-2023', 'a', 'a'),
+(4, 'ad', 'ad', '04-09-2023', 'file:///C:/Users/ACER/Downloads/Jadwal_Perkuliahan_Ganjil_TIF_2023-2024_(1).pdf', 'file:///C:/Users/ACER/Downloads/Jadwal_Perkuliahan_Ganjil_TIF_2023-2024_(1).pdf');
 
 -- --------------------------------------------------------
 
@@ -125,23 +194,18 @@ CREATE TABLE `services` (
   `id` int(11) NOT NULL,
   `jumlah_peserta` varchar(30) NOT NULL,
   `nama_kegiatan` varchar(30) NOT NULL,
-  `tgl_kegiatan` varchar(20) NOT NULL,
-  `berkas` varchar(100) NOT NULL,
-  `bk` varchar(100) NOT NULL
+  `tgl_kegiatan` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `services`
 --
 
-INSERT INTO `services` (`id`, `jumlah_peserta`, `nama_kegiatan`, `tgl_kegiatan`, `berkas`, `bk`) VALUES
-(85, 's', 's', '01-08-2023', 'Doa.docx', 'Doa.docx'),
-(86, 'a', 'a', '24-08-2023', 'Doa.docx', 'SURAT KOMITMEN FEE-papah april 2023-revisi1.pdf'),
-(87, 'dfdfd', 'dfdf', '24-08-2023', 'uzi uts.docx', 'TUGAS GAMBAR-AMOY.docx'),
-(88, 'a', 'a', '01-08-2023', 'uzi uts.docx', 'uzi uts.docx'),
-(89, '155', 'zzzzz', '05-08-2023', 'Laporan fix print.docx', 'Laporan fix print.docx'),
-(90, '12', 'aa', '02-08-2023', 'Doa (1).docx', 'Doa (2).docx'),
-(92, 'a', 'a', '23-08-2023', 'Laporan fix print.pdf', 'SURAT KOMITMEN FEE-papah april 2023-revisi1.pdf');
+INSERT INTO `services` (`id`, `jumlah_peserta`, `nama_kegiatan`, `tgl_kegiatan`) VALUES
+(102, 'a', 'a', '01-08-2023'),
+(103, 's', 's', '08-08-2023'),
+(104, 'a', 'a', '16-08-2023'),
+(106, 'dede', 'ddrssdflls', '09-08-2023');
 
 -- --------------------------------------------------------
 
@@ -159,32 +223,9 @@ CREATE TABLE `tb_jeniskegiatan` (
 --
 
 INSERT INTO `tb_jeniskegiatan` (`id`, `jeniskegiatan`) VALUES
-(3, 'Webinar'),
-(4, 'Pelatihan'),
-(6, 'Sertifikasi');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `tb_perusahaan`
---
-
-CREATE TABLE `tb_perusahaan` (
-  `id` int(2) NOT NULL,
-  `kepala_perusahaan` varchar(40) NOT NULL,
-  `nama_perusahaan` varchar(40) NOT NULL,
-  `no_telp` varchar(20) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `alamat` text NOT NULL,
-  `website` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data untuk tabel `tb_perusahaan`
---
-
-INSERT INTO `tb_perusahaan` (`id`, `kepala_perusahaan`, `nama_perusahaan`, `no_telp`, `email`, `alamat`, `website`) VALUES
-(1, 'Dr. Hery Antasari, ST., M.Dev.Plg', 'BPSDM Provinsi Jawa Barat', '0811-2001-0011', 'smkn12acehsingkil@gmail.com', 'Jl. Kolonel Masturi No.KM, RW.5, Cipageran, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat 40511', 'https://bpsdm.jabarprov.go.id');
+(1, 'Webinar'),
+(2, 'Pelatihan'),
+(3, 'Sertifikasi');
 
 -- --------------------------------------------------------
 
@@ -205,8 +246,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `full_name`, `level`) VALUES
-(3, 'administrator', '$2y$10$Osq.1wC0noe4WzCo8e2TyuBqxxBZwuXVvbqkuwNAZXvq7YVgzsrjm\n', 'Administrator', 'Admin'),
-(5, 'fitria', '$2y$10$kBbT8xCXy/sHv2auUIx.COdga/ATXs7mzYPAtZIE91eh4hK1H3yF6\n', 'Fitria Fauziah Diana', 'Admin');
+(1, 'administrator', '$2y$10$Osq.1wC0noe4WzCo8e2TyuBqxxBZwuXVvbqkuwNAZXvq7YVgzsrjm\n', 'Administrator', 'Admin'),
+(2, 'fitria', '$2y$10$kBbT8xCXy/sHv2auUIx.COdga/ATXs7mzYPAtZIE91eh4hK1H3yF6\n', 'Fitria Fauziah Diana', 'Admin');
 
 --
 -- Indexes for dumped tables
@@ -219,9 +260,27 @@ ALTER TABLE `aplikasi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `arsip`
+--
+ALTER TABLE `arsip`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `bigdata`
 --
 ALTER TABLE `bigdata`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `filess`
+--
+ALTER TABLE `filess`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -249,12 +308,6 @@ ALTER TABLE `tb_jeniskegiatan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_perusahaan`
---
-ALTER TABLE `tb_perusahaan`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
@@ -268,49 +321,61 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `aplikasi`
 --
 ALTER TABLE `aplikasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `arsip`
+--
+ALTER TABLE `arsip`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `bigdata`
 --
 ALTER TABLE `bigdata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT untuk tabel `files`
+--
+ALTER TABLE `files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT untuk tabel `filess`
+--
+ALTER TABLE `filess`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `multimedia`
 --
 ALTER TABLE `multimedia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `publikasi`
 --
 ALTER TABLE `publikasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_jeniskegiatan`
 --
 ALTER TABLE `tb_jeniskegiatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT untuk tabel `tb_perusahaan`
---
-ALTER TABLE `tb_perusahaan`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
